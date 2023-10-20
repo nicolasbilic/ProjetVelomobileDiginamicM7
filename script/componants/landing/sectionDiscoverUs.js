@@ -5,7 +5,9 @@ export default class SectionDiscoverUs extends ManageDom {
   constructor(data) {
     super();
     this.data = data;
+    this.images = [];
     this.render();
+    this.animateLightbox();
   }
   //Render method
   render() {
@@ -31,7 +33,7 @@ export default class SectionDiscoverUs extends ManageDom {
       },
     ]);
     //call the lightbox details method
-    this.createLightBoxDetails(containerDetails, "2");
+    this.createLightBoxDetails(containerDetails, this.data.lightboxText.number);
   }
 
   //Create basic dom Element
@@ -52,16 +54,25 @@ export default class SectionDiscoverUs extends ManageDom {
     //Create the lightbox container
     const containerLightBox = this.createMarkup("div", "", lightBoxAndText, [
       {
-        style: "width: 35%; border:4px solid #007DCC;",
+        style: "width: 30%; border:4px solid #007DCC; position:relative;",
       },
     ]);
-    //create the lightbox's pictures
-    const img = this.createMarkup("img", "", containerLightBox, [
-      {
-        style: "width: 100%; height:100%; margin:0",
-        src: "./../../assets/purple_bike.png",
-      },
-    ]);
+    //create the lightbox's pictures from the array
+    this.data.lightbox.forEach((element, i = 0) => {
+      const imgLightbox = this.createMarkup("img", "", containerLightBox, [
+        {
+          style: "width: 100%; height:100%; margin:0; position:absolute;",
+          src: `./../../assets/${element}.png`,
+          alt: `${element}`,
+        },
+      ]);
+      if (i !== 0) {
+        imgLightbox.style.opacity = 0;
+      }
+      //Hide all picture except the first one
+      this.images.push(imgLightbox);
+      i++;
+    });
   }
 
   //Method that create the lightbox's details
@@ -83,15 +94,66 @@ export default class SectionDiscoverUs extends ManageDom {
         "p",
         this.data.lightboxText.text[i],
         details,
-        [{ style: "width:90%; margin-bottom : 40px;" }]
+        [{ style: "width:90%; margin-bottom : 20px;" }]
       );
       //Create the button
       const button = this.createMarkup("button", "En découvrir plus", details, [
         {
           style:
-            "width:210px;height:50px; background-color:#007DCC; border-radius:10px; border:none; color: white;",
+            "width:210px;height:50px; margin-bottom: 30px; background-color:#007DCC; border-radius:10px; border:none; color: white;",
         },
       ]);
     }
+  }
+  //Method that animate the lightbox
+  animateLightbox() {
+    let i = 0;
+    let scroll = true;
+    let interval;
+    const speed = 2000;
+    //Declaration of the start interval function
+    const startInterval = () => {
+      //Use a Timer method to switch picture
+      interval = setInterval(() => {
+        console.log("d");
+        //Déclar the current and next picture
+        let currentPicture = this.images[i];
+        let nextPicture = this.images[i + 1];
+        //If image isn't the last one
+        if (i < this.data.lightbox.length - 1) {
+          //swap picture with an imation
+          currentPicture.style.transition = "opacity 1s";
+          currentPicture.style.opacity = 0; //Hide current Picture
+          nextPicture.style.transition = "opacity 1s";
+          nextPicture.style.opacity = 1; //Show next Picture
+          setTimeout(() => {}, speed);
+          i++;
+        } else {
+          //swap picture
+          nextPicture = this.images[0];
+          currentPicture.style.transition = "opacity 1s";
+          currentPicture.style.opacity = 0;
+          nextPicture.style.transition = "opacity 1s";
+          nextPicture.style.opacity = 1;
+          setTimeout(() => {}, speed);
+          i = 0;
+        }
+      }, speed);
+    };
+    //call the function
+    startInterval();
+    //Loop each image to add the stop
+    this.images.forEach((image, i) => {
+      //Add an  event listener
+      image.addEventListener("click", () => {
+        //if scroll true, stop interval, else start interval
+        if (scroll === true) {
+          clearInterval(interval);
+        } else {
+          startInterval();
+        }
+        scroll = !scroll;
+      });
+    });
   }
 }
