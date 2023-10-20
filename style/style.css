@@ -1,3 +1,21 @@
 body {
     margin:0;
 }
+
+@keyframes velomobile {
+    0% {transform: scaleX(1)}
+    29%{
+        left:85%;
+        transform: scaleX(1)
+    }
+    30%{transform: scaleX(-1)}
+    59%{
+        left:10%;
+        transform: scaleX(-1)
+    }
+    60% {
+        left:10%;
+        transform: scaleX(1)
+    }
+    100%{}
+}
