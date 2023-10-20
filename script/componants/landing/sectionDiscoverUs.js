@@ -20,7 +20,8 @@ export default class SectionDiscoverUs extends ManageDom {
     //Create the lightbox and text area
     const lightBoxAndText = this.createMarkup("div", "", section, [
       {
-        style: "width: 100%; display:flex; justify-content:space-between;",
+        style:
+          "width: 100%; height:465px; display:flex; justify-content:space-between;",
       },
     ]);
     //Call the lightbox methods
@@ -43,7 +44,7 @@ export default class SectionDiscoverUs extends ManageDom {
     //create the <section>
     const section = this.createMarkup("section", "", main, [
       {
-        style: "width:90%;",
+        style: "width:90%; margin-bottom:60px;",
       },
     ]);
     return section;
@@ -54,18 +55,21 @@ export default class SectionDiscoverUs extends ManageDom {
     //Create the lightbox container
     const containerLightBox = this.createMarkup("div", "", lightBoxAndText, [
       {
-        style: "width: 30%; border:4px solid #007DCC; position:relative;",
+        style: "width: 35%; position:relative; display:flex; ",
       },
     ]);
     //create the lightbox's pictures from the array
     this.data.lightbox.forEach((element, i = 0) => {
       const imgLightbox = this.createMarkup("img", "", containerLightBox, [
         {
-          style: "width: 100%; height:100%; margin:0; position:absolute;",
+          style:
+            "width: 100%;  max-width:455px; max-height:455px; margin: 0; position: absolute; object-fit: contain; top:50%; transform: translateY(-50%);",
           src: `./../../assets/${element}.png`,
           alt: `${element}`,
         },
       ]);
+
+      imgLightbox.style.border = "4px solid #007DCC";
       if (i !== 0) {
         imgLightbox.style.opacity = 0;
       }
@@ -80,7 +84,9 @@ export default class SectionDiscoverUs extends ManageDom {
     //Create number details
     for (let i = 0; i < number; i++) {
       const details = this.createMarkup("div", "", containerDetails, [
-        { style: "width:100%;" },
+        {
+          style: "width:100%;",
+        },
       ]);
       //Create the title
       const title = this.createMarkup(
@@ -94,13 +100,18 @@ export default class SectionDiscoverUs extends ManageDom {
         "p",
         this.data.lightboxText.text[i],
         details,
-        [{ style: "width:90%; margin-bottom : 20px;" }]
+        [
+          {
+            style:
+              "width: 90%; margin-bottom: 20px; max-height: 75px; overflow: hidden;  white-space: pre-wrap; text-overflow: ellipsis; ",
+          },
+        ]
       );
       //Create the button
       const button = this.createMarkup("button", "En découvrir plus", details, [
         {
           style:
-            "width:210px;height:50px; margin-bottom: 30px; background-color:#007DCC; border-radius:10px; border:none; color: white;",
+            "width:20%; min-width: 125px;height:20%; margin-bottom: 30px; background-color:#007DCC; border-radius:10px; border:none; color: white;",
         },
       ]);
     }

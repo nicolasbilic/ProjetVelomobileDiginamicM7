@@ -38,7 +38,7 @@ export default class Landing extends ManageDom {
     const main = this.createMarkup("main", "", document.body, [
       {
         style:
-          "width:100%; margin-bottom: 150px; display:flex; justify-content: space-between; display:flex; justify-content:center;",
+          "width:100%; display:flex; flex-direction: column;  display:flex; align-items:center;",
       },
     ]);
     //Get the header
