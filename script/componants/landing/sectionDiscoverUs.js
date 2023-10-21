@@ -44,7 +44,7 @@ export default class SectionDiscoverUs extends ManageDom {
     //create the <section>
     const section = this.createMarkup("section", "", main, [
       {
-        style: "width:90%; margin-bottom:60px;",
+        style: "width: 90%; margin-bottom: 60px;",
       },
     ]);
     return section;
@@ -55,7 +55,7 @@ export default class SectionDiscoverUs extends ManageDom {
     //Create the lightbox container
     const containerLightBox = this.createMarkup("div", "", lightBoxAndText, [
       {
-        style: "width: 35%; position:relative; display:flex; ",
+        style: "width: 35%; position: relative; display: flex; ",
       },
     ]);
     //create the lightbox's pictures from the array
@@ -63,12 +63,11 @@ export default class SectionDiscoverUs extends ManageDom {
       const imgLightbox = this.createMarkup("img", "", containerLightBox, [
         {
           style:
-            "width: 100%;  max-width:455px; max-height:455px; margin: 0; position: absolute; object-fit: contain; top:50%; transform: translateY(-50%);",
+            "width: 100%; max-width: 455px; max-height: 455px; margin: 0; position: absolute; object-fit: contain; top:50%; transform: translateY(-50%);",
           src: `./../../assets/${element}.png`,
           alt: `${element}`,
         },
       ]);
-
       imgLightbox.style.border = "4px solid #007DCC";
       if (i !== 0) {
         imgLightbox.style.opacity = 0;
@@ -93,7 +92,7 @@ export default class SectionDiscoverUs extends ManageDom {
         "h2",
         this.data.lightboxText.title[i],
         details,
-        [{ style: "width:90%;height:40px; margin:0;" }]
+        [{ style: "width: 90%;height: 40px; margin: s0;" }]
       );
       //Create the text
       const text = this.createMarkup(
@@ -111,7 +110,7 @@ export default class SectionDiscoverUs extends ManageDom {
       const button = this.createMarkup("button", "En découvrir plus", details, [
         {
           style:
-            "width:20%; min-width: 125px;height:20%; margin-bottom: 30px; background-color:#007DCC; border-radius:10px; border:none; color: white;",
+            "width: 20%; min-width: 125px;height: 20%; margin-bottom: 30px; background-color: #007DCC; border-radius: 10px; border: none; color: white;",
         },
       ]);
     }

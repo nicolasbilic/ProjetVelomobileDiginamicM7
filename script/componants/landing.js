@@ -11,7 +11,6 @@ const lightBoxData = {
     "red_yellow_bike",
     "red_bike",
     "purple_bike",
-    "orange_velomobile",
     "orange_velo",
     "orange_bike",
     "green_bike",
@@ -26,6 +25,7 @@ const lightBoxData = {
     ],
   },
 };
+
 //Class to create a landing page
 export default class Landing extends ManageDom {
   constructor() {
