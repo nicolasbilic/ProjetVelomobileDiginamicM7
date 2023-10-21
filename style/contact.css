@@ -1,11 +1,131 @@
-.content-row {
-    width: 100%;
+body {
+    font-family: 'Epilogue'; /* à télécharger et mettre dans le style.css*/
+    margin: 0 100px;
 }
 
-.content-row-map {
+.description {
+    width: 50%;
+    text-align: center;
+}
+
+.question {
+    font-size: 25px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.content-map {
+    /* max-height: 600px; */
+    width: 50%;
+    height: auto;
+}
+
+.content-form {
+    padding: 0 0 0 40px;
     width: 50%;
 }
 
-.content-row-form {
-    width: 50%;
+.content-form-nameFields {
+    display: flex;
+}
+
+.content-form-mailNumber {
+    display: flex;
+}
+
+.content-form-field {
+    padding: 20px 20px 0 0;
+}
+
+::placeholder {
+    color: #606262;
+    font-weight: 600;
+    padding : 5px;
+}
+
+textarea {
+    border-radius: 8px;
+    border: none;
+    background-color: #ecf5f6;
+    resize: none;
+}
+
+textarea::placeholder {
+    font-weight: 100;
+}
+
+input {
+    height: 45px;
+    width: 250px;
+    border-radius: 8px;
+    border: none;
+    background-color: #ecf5f6;
+}
+
+button {
+    height: 45px;
+    width: 300px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(210, 31, 31);
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 15px;
+    padding: 0;
+}
+
+.socials-thumb {
+    width: auto;
+    height: 30px;
+    bottom: 2px;
+    position: relative;
+}
+
+.socials-header p {
+    margin: 0;
+    line-height: 30px;
+    text-align: center;
+}
+
+.socials-header {
+    display: flex;
+    justify-content: center;
+}
+
+.socials-header > p {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.socials-icons {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.socials-icons img {
+    padding: 0 5px;
+}
+
+.img-icone-linkedin {
+    height: 50px;
+    width: 50px;
+}
+
+select {
+    height: 45px;
+    width: 254px;
+    border-radius: 8px;
+    border: none;
+    background-color: #ecf5f6;
+    font-weight: 600;
+    color: #606262;
+    padding : 5px;
 }
