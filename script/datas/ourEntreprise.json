@@ -1,0 +1,12 @@
+{
+    "valentin": {
+        "name": "Valentin Momin",
+        "status": "Co-fondateur",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut eros auctor, varius ex in, vulputate urna. Ut venenatis libero eu euismod volutpat. Suspendisse potenti. Morbi laoreet interdum nisi, ac vestibulum elit cursus non. Sed ut ultrices dui, ut viverra liberoLorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut eros auctor, varius ex in, vulputate urna. Ut venenatis libero eu euismod volutpat. Suspendisse potenti. Morbi laoreet interdum nisi, ac vestibulum elit cursus non. Sed ut ultrices dui, ut viverra libero"
+    },
+    "tchoupi": {
+        "name": "Pierre Tchoupi",
+        "status": "Co-fondateur",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut eros auctor, varius ex in, vulputate urna. Ut venenatis libero eu euismod volutpat. Suspendisse potenti. Morbi laoreet interdum nisi, ac vestibulum elit cursus non. Sed ut ultrices dui, ut viverra liberoLorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut eros auctor, varius ex in, vulputate urna. Ut venenatis libero eu euismod volutpat. Suspendisse potenti. Morbi laoreet interdum nisi, ac vestibulum elit cursus non. Sed ut ultrices dui, ut viverra libero"
+    }
+}
