@@ -58,37 +58,29 @@ export default class PresentationSection extends ManageDom {
       },
       null
     );
-
-    console.log("p", profilDataFiltered);
-
     //Create the profil container
     const containerProfil = this.createMarkup("div", "", section, [
       {
         style:
-          "width:80%; display:flex;  display:flex; align-items:center; justify-content: center;",
+          "width:80%; display:flex;  display:flex; align-items:center; position:relative",
       },
     ]);
     //Create the profil picture
     const profilPicture = this.createMarkup("img", "", containerProfil, [
       {
         style:
-          " width:30%; height:auto;margin: 0; border-radius: 50%; background-color:black; object-fit: conain;",
+          " width: 25%; height:auto;margin: 0; border-radius: 50%; background-color:black; object-fit: conain; z-index:2",
         src: `./../../assets/profil/${profil}.png`,
         alt: `${profil}`,
       },
     ]);
-    //Reverse if order = reverse
-    if (order === "reverse") {
-      containerProfil.style.flexDirection = "row-reverse";
-    }
     //Create the profil container
     const detailsContainer = this.createMarkup("div", "", containerProfil, [
       {
         style:
-          "width:70%; height:auto; background-color: #EFEFEF; border-radius: 10px;",
+          "width:100%; box-sizing: border-box;  height: auto; max-height: 220px; background-color: #EFEFEF; border-radius: 10px; overflow: hidden; position: absolute",
       },
     ]);
-    console.log(this.profilDatas);
 
     const profilName = this.createMarkup(
       "h2",
@@ -97,7 +89,7 @@ export default class PresentationSection extends ManageDom {
       [
         {
           style:
-            "width:70%; height:auto; background-color: #EFEFEF; border-radius: 10px;",
+            "width:70%; height:auto; background-color: #EFEFEF; border-radius: 10px; margin-left: 3%;",
         },
       ]
     );
@@ -108,7 +100,7 @@ export default class PresentationSection extends ManageDom {
       [
         {
           style:
-            "width:70%; height:auto; background-color: #EFEFEF; border-radius: 10px;",
+            "width:70%; height:auto; background-color: #EFEFEF; border-radius: 10px;  margin-left: 3%; font-size: 20px;",
         },
       ]
     );
@@ -119,10 +111,18 @@ export default class PresentationSection extends ManageDom {
       [
         {
           style:
-            "width:70%; height:auto; background-color: #EFEFEF; border-radius: 10px;",
+            "width:90%; height:auto; background-color: #EFEFEF; border-radius: 10px;  margin-left: 3%;",
         },
       ]
     );
+
+    detailsContainer.style.paddingLeft = "25%";
+    //Reverse if order = reverse
+    if (order === "reverse") {
+      containerProfil.style.flexDirection = "row-reverse";
+      detailsContainer.style.paddingLeft = "0%";
+      detailsContainer.style.paddingRight = "25%";
+    }
   }
 
   async fetchData() {
