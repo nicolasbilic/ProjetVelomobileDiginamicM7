@@ -8,5 +8,25 @@
         "name": "Pierre Tchoupi",
         "status": "Co-fondateur",
         "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut eros auctor, varius ex in, vulputate urna. Ut venenatis libero eu euismod volutpat. Suspendisse potenti. Morbi laoreet interdum nisi, ac vestibulum elit cursus non. Sed ut ultrices dui, ut viverra liberoLorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut eros auctor, varius ex in, vulputate urna. Ut venenatis libero eu euismod volutpat. Suspendisse potenti. Morbi laoreet interdum nisi, ac vestibulum elit cursus non. Sed ut ultrices dui, ut viverra libero"
+    },
+    "cards": {
+        "projects": {
+            "title": "Notre projet",
+            "color": "#007DCC",
+            "picture": "projet.png",
+            "texts": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut eros auctor, varius ex in, vulputate urna. Ut venenatis libero eu euismod volutpat. Suspendisse potenti. Morbi laoreet interdum nisi, ac vestibulum elit cursus non. Sed ut ultrices dui, ut viverra liberoLorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut eros auctor, varius ex in, vulputate urna. Ut venenatis libero eu euismod volutpat. Suspendisse potenti. Morbi laoreet interdum nisi, ac vestibulum elit cursus non. Sed ut ultrices dui, ut viverra libero", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut eros auctor, varius ex in, vulputate urna. Ut venenatis libero eu euismod volutpat. Suspendisse potenti. Morbi laoreet interdum nisi, ac vestibulum elit cursus non. Sed ut ultrices dui, ut viverra liberoLorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut eros auctor, varius ex in, vulputate urna. Ut venenatis libero eu euismod volutpat. Suspendisse potenti. Morbi laoreet interdum nisi, ac vestibulum elit cursus non. Sed ut ultrices dui, ut viverra libero"]
+        },
+        "values": {
+            "title": "Nos valeurs",
+            "color": "#75C41B",
+            "picture": "values.png",
+            "texts": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut eros auctor, varius ex in, vulputate urna. Ut venenatis libero eu euismod volutpat. Suspendisse potenti. Morbi laoreet interdum nisi, ac vestibulum elit cursus non. Sed ut ultrices dui, ut viverra liberoLorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut eros auctor, varius ex in, vulputate urna. Ut venenatis libero eu euismod volutpat. Suspendisse potenti. Morbi laoreet interdum nisi, ac vestibulum elit cursus non. Sed ut ultrices dui, ut viverra libero", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut eros auctor, varius ex in, vulputate urna. Ut venenatis libero eu euismod volutpat. Suspendisse potenti. Morbi laoreet interdum nisi, ac vestibulum elit cursus non. Sed ut ultrices dui, ut viverra liberoLorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut eros auctor, varius ex in, vulputate urna. Ut venenatis libero eu euismod volutpat. Suspendisse potenti. Morbi laoreet interdum nisi, ac vestibulum elit cursus non. Sed ut ultrices dui, ut viverra libero"]
+        },
+        "why": {
+            "title": "Pourquoi le vélomobile",
+            "color": "#CC0000",
+            "picture": "pollution.png",
+            "texts": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut eros auctor, varius ex in, vulputate urna. Ut venenatis libero eu euismod volutpat. Suspendisse potenti. Morbi laoreet interdum nisi, ac vestibulum elit cursus non. Sed ut ultrices dui, ut viverra liberoLorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut eros auctor, varius ex in, vulputate urna. Ut venenatis libero eu euismod volutpat. Suspendisse potenti. Morbi laoreet interdum nisi, ac vestibulum elit cursus non. Sed ut ultrices dui, ut viverra libero", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut eros auctor, varius ex in, vulputate urna. Ut venenatis libero eu euismod volutpat. Suspendisse potenti. Morbi laoreet interdum nisi, ac vestibulum elit cursus non. Sed ut ultrices dui, ut viverra liberoLorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut eros auctor, varius ex in, vulputate urna. Ut venenatis libero eu euismod volutpat. Suspendisse potenti. Morbi laoreet interdum nisi, ac vestibulum elit cursus non. Sed ut ultrices dui, ut viverra libero"]
+        }
     }
 }

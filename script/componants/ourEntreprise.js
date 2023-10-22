@@ -1,18 +1,23 @@
 import ManageDom from "./ManageDom.js";
 import PresentationSection from "./ourEntreprise/PresentationSection.js";
+import Cards from "./ourEntreprise/cards.js";
 
 export default class OurEntreprise extends ManageDom {
   constructor() {
     super();
     this.init();
   }
-  //Method that be use to defer the render
+  //Defer the rend after initialiation
   async init() {
-    await this.render();
-    this.createBanner();
+    const data_loaded = await this.fetchData();
+    this.datas = data_loaded;
+    if (this.datas) {
+      //call the render method
+      this.render();
+    }
   }
   // Method that create the render
-  async render() {
+  render() {
     const main = this.createMarkup("main", "", document.body, [
       {
         style:
@@ -21,16 +26,29 @@ export default class OurEntreprise extends ManageDom {
     ]);
     const header = document.querySelector("header");
     document.body.insertBefore(main, header.nextSibling);
-    try {
-      await new PresentationSection();
-    } catch (error) {
-      console.error(error);
-    }
+    //Call the instance of presentationSection
+    console.log(this.datas);
+    new PresentationSection(this.datas);
+    //Take a delay for the end of the presentation Render
+    setTimeout(() => {
+      //Create the banner area
+      this.createBanner();
+      //Create the section for cards
+      const sectionCard = this.createMarkup("section", "", main, [
+        {
+          style:
+            "width: 100%; height: auto; ; margin-bottom: 40px; display: flex; flex-direction: column; align-items: center",
+        },
+      ]);
+      new Cards(sectionCard, this.datas.cards.projects, "reverse");
+      new Cards(sectionCard, this.datas.cards.values, "normal");
+      new Cards(sectionCard, this.datas.cards.why, "reverse");
+    }, 100);
+    //Create the cards sections
   }
   //Method to create the banner area
-  async createBanner() {
+  createBanner() {
     //Waith a resolve
-    await this.waitForPresentationSection();
     const main = document.querySelector("main");
     //Create the blue border
     const blueBorderTop = this.createMarkup("div", "", main, [
@@ -54,14 +72,12 @@ export default class OurEntreprise extends ManageDom {
       },
     ]);
   }
-  //Method to get a promise resolve
-  waitForPresentationSection() {
-    return new Promise((resolve) => {
-      const checkInterval = setInterval(() => {
-        clearInterval(checkInterval);
-        resolve();
-      }, 100);
-    });
+
+  async fetchData() {
+    //importation des données du json
+    const response = await fetch("./../script/datas/ourEntreprise.json");
+    const profilDatas = await response.json();
+    return profilDatas;
   }
 }
 

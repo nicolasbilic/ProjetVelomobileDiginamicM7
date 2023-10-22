@@ -2,18 +2,10 @@ import ManageDom from "./../ManageDom.js";
 
 //Class to create a landing page
 export default class PresentationSection extends ManageDom {
-  constructor() {
+  constructor(datas) {
     super();
-    this.init();
-  }
-  //Defer the rend after initialiation
-  async init() {
-    const data_loaded = await this.fetchData();
-    this.profilDatas = data_loaded;
-    if (this.profilDatas) {
-      //call the render method
-      this.render();
-    }
+    this.datas = datas;
+    this.render();
   }
   //Render Method
   render() {
@@ -39,26 +31,22 @@ export default class PresentationSection extends ManageDom {
           "width: 90%; margin-bottom: 60px; display: flex; flex-direction: column; align-items: center;",
       },
     ]);
-    console.log("pdzad");
     return section;
   }
 
   createPorfil(section, profil, order) {
     //filter the good profil in data
-    const profilDataFiltered = Object.keys(this.profilDatas).reduce(
-      (result, key) => {
-        if (key === profil) {
-          result = this.profilDatas[key];
-        }
-        return result;
-      },
-      null
-    );
+    const profilDataFiltered = Object.keys(this.datas).reduce((result, key) => {
+      if (key === profil) {
+        result = this.datas[key];
+      }
+      return result;
+    }, null);
     //Create the profil container
     const containerProfil = this.createMarkup("div", "", section, [
       {
         style:
-          "width:80%; display:flex;  display:flex; align-items:center; position:relative",
+          "width:60%; display:flex; margin-bottom: 40px; display:flex; align-items:center; position:relative",
       },
     ]);
     //Create the profil picture
@@ -119,12 +107,5 @@ export default class PresentationSection extends ManageDom {
       detailsContainer.style.paddingLeft = "0%";
       detailsContainer.style.paddingRight = "25%";
     }
-  }
-
-  async fetchData() {
-    //importation des données du json
-    const response = await fetch("./../script/datas/ourEntreprise.json");
-    const profilDatas = await response.json();
-    return profilDatas;
   }
 }
