@@ -19,13 +19,8 @@ export default class PresentationSection extends ManageDom {
   render() {
     // //Call the createSection
     const section = this.createSection();
-    //Create the main container
-    const main = this.createMarkup("main", "", document.body, [
-      {
-        style:
-          "width:100%; display:flex; flex-direction: column;  display:flex; align-items:center;",
-      },
-    ]);
+    //get the main container
+    const main = document.querySelector("main");
     //Get the header
     const header = document.querySelector("header");
     //Put the body after the header
@@ -44,6 +39,7 @@ export default class PresentationSection extends ManageDom {
           "width: 90%; margin-bottom: 60px; display: flex; flex-direction: column; align-items: center;",
       },
     ]);
+    console.log("pdzad");
     return section;
   }
 
