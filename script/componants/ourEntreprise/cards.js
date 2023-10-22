@@ -20,7 +20,7 @@ export default class Cards extends ManageDom {
     //Create the picture
     const cardPicture = this.createMarkup("img", "", cardBody, [
       {
-        style: "width: 50%; height:auto; margin: 0; ", // Ajout de flex-shrink: 0
+        style: "width: 50%; height:auto; margin: 0; ",
         src: `./../../assets/entreprise/${this.datas.picture}`,
         alt: "Banner",
       },
@@ -28,7 +28,7 @@ export default class Cards extends ManageDom {
     //Create the span for the title
     const cardSpan = this.createMarkup("span", "", cardBody, [
       {
-        style: `position: absolute; top: 0; right: 0; width: 20%; height: 12%; background-color: ${this.datas.color}; flex-shrink: 0;`, // Ajout de flex-shrink: 0
+        style: `position: absolute; top: 0; right: 0; width: 20%; height: 12%; background-color: ${this.datas.color};`, // Ajout de flex-shrink: 0
       },
     ]);
     //Create the title
