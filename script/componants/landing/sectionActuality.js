@@ -17,35 +17,37 @@ export default class SectionActuality extends ManageDom {
     const section = this.createMarkup("section", "", main, [
       {
         style:
-          "width: 90%; margin-bottom: 60px; position: relative; overflow: hidden; ",
+          "width: 90%; margin-bottom: 60px; position: relative; overflow: hidden;",
       },
     ]);
     const h1Actuality = this.createMarkup("h1", "Actualités", section, []);
     //Create the main card container
     const container = this.createMarkup("div", "", section, [
       {
-        style:
-          "width:auto; display: grid; grid-template-columns: repeat(5, 33.33%) ;",
+        style: `width:auto; display: grid; grid-template-columns: repeat(${this.data.nb_articles}, 35.6%);`,
       },
     ]);
+    //Create the arrows container
     const arrowContainer = this.createMarkup("div", "", container, [
       {
         style:
-          "width:100%; height:auto; position: absolute; z-index: 2; display: flex; justify-content: space-between",
+          "width:100%; height:auto; top: 50%; position: absolute; z-index: 2; display: flex; justify-content: space-between; align-items: center;",
       },
     ]);
+    //Create arrow left
     const arrowLeft = this.createMarkup("img", "", arrowContainer, [
       {
         style:
-          "width: auto; height: auto; transform: scaleX(-1) translateX(50%); cursor: pointer;",
+          "width: auto; height: auto; transform: scaleX(-1); position:absolute; left: 0; opacity: 0;",
         src: `./../../assets/arrowside.png`,
         alt: `arrowLeft`,
       },
     ]);
+    //Create arrow right
     const arrowRight = this.createMarkup("img", "", arrowContainer, [
       {
         style:
-          "width: auto; height: auto; cursor: pointer; transform: translateX(50%)",
+          "width: auto; height: auto; cursor: pointer;  position:absolute; right: 0; overflow: visible",
         src: `./../../assets/arrowside.png`,
         alt: `arrowRight`,
       },
@@ -63,15 +65,11 @@ export default class SectionActuality extends ManageDom {
       this.articles = article.container.children;
       this.articles = Array.from(this.articles);
     }
+    //Loop again to add style : ignore the first item
     for (let i = 1; i < this.data.nb_articles + 1; i++) {
       this.articles[i].style.position = "relative";
       this.articles[i].setAttribute("class", "transform");
-      if (i === 2) {
-        this.articles[i].style.justifySelf = "center"; // Centrez horizontalement
-      }
-      if (i >= 3) {
-        this.articles[i].style.justifySelf = "right"; // Centrez horizontalement
-      }
+      this.articles[i].style.justifySelf = "left";
     }
     return { arrowRight, arrowLeft, section };
   }
@@ -80,42 +78,51 @@ export default class SectionActuality extends ManageDom {
     // Obtenez les éléments une seule fois en dehors du gestionnaire de clic
     const firstChild = this.articles[1];
     const secondChild = this.articles[2];
-    const thirdChild = this.articles[3];
+    //Get parent and children width to calculate the distance to travel with the animations
+    const parentWidth = firstChild.parentElement.offsetWidth;
+    const secondChildWidth = secondChild.offsetWidth;
+    const halfParentWidth = (parentWidth - secondChildWidth) / 2;
     const transform = document.querySelectorAll(".transform");
     let nb_clicLeft = 1;
     let nb_clicRight = 1;
     this.dom_element.arrowLeft.addEventListener("click", () => {
-      // Calculez la largeur du parent à chaque clic
-      if (nb_clicLeft < this.data.nb_articles - 2) {
-        const parentWidth = firstChild.parentElement.offsetWidth;
-        const secondChildWidth = secondChild.offsetWidth;
-        const halfParentWidth = (parentWidth - secondChildWidth) / 2;
-        console.log("parent", halfParentWidth);
+      // Check if there are 3 more articles to show
+      if (nb_clicLeft <= 0) {
+        //Add the movement to eache element with class transform
         transform.forEach((element) => {
           element.style.transition = "transform 1s ease";
-          element.style.transform = `translateX(-${
+          element.style.transform = `translateX(${
             nb_clicLeft * halfParentWidth
           }px)`;
         });
         nb_clicLeft++;
         nb_clicRight--;
+        //Show and hide left arrow
+        if (nb_clicRight === 1) {
+          this.dom_element.arrowLeft.style.opacity = "0";
+          this.dom_element.arrowLeft.style.cursor = "default";
+        } else if (nb_clicRight < this.data.nb_articles - 2) {
+          this.dom_element.arrowRight.style.opacity = "1";
+        }
       }
     });
     this.dom_element.arrowRight.addEventListener("click", () => {
-      // Calculez la largeur du parent à chaque clic
-      if (nb_clicLeft > 1) {
-        const parentWidth = firstChild.parentElement.offsetWidth;
-        const secondChildWidth = secondChild.offsetWidth;
-        const halfParentWidth = (parentWidth - secondChildWidth) / 2;
-        console.log("parent2", halfParentWidth);
+      //Show and hide left arrow
+      this.dom_element.arrowLeft.style.opacity = "1";
+      this.dom_element.arrowLeft.style.cursor = "pointer";
+      if (nb_clicRight < this.data.nb_articles - 2) {
         transform.forEach((element) => {
           element.style.transition = "transform 1s ease";
-          element.style.transform = `translateX(${
+          element.style.transform = `translateX(-${
             nb_clicRight * halfParentWidth
           }px)`;
         });
         nb_clicRight++;
         nb_clicLeft--;
+        if (nb_clicRight == this.data.nb_articles - 2) {
+          this.dom_element.arrowRight.style.opacity = 0;
+          this.dom_element.arrowRight.style.cursor = "default";
+        }
       }
     });
   }
