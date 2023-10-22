@@ -122,6 +122,10 @@ export default class Footer extends ManageDom {
     const select = this.createMarkup("select", "Selectionnez", contactForm, [
       {name : "contactType"},{id : "contactType"},{style: "font-weight: bold;border-radius: 5px; margin-bottom: 10px; color: grey"}
     ]);
+
+    const selectInstruction = this.createMarkup("option", "Selectionnez", select, [
+      {value : "" }, {style: "font-weight: bold;"}, {disabled : true},
+    ]);
     
     const select1 = this.createMarkup("option", "Investisseur", select, [
       {value : "Investisseur"}, {style: "font-weight: bold;"}
@@ -131,8 +135,8 @@ export default class Footer extends ManageDom {
       {value : "Ambassadeur"}, {style: "font-weight: bold;"}
     ]);
 
-    const select3 = this.createMarkup("option", "Ingenieur", select, [
-      {value : "Ingenieur"}, {style: "font-weight: bold;"}
+    const select3 = this.createMarkup("option", "Technique", select, [
+      {value : "Technique"}, {style: "font-weight: bold;"}
     ]);
 
     const email = this.createMarkup("input", "", contactForm, [
