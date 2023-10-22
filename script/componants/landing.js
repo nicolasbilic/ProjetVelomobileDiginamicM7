@@ -4,58 +4,20 @@ import SectionDiscoverUs from "./landing/sectionDiscoverUs.js";
 import SectionFactoryProducts from "./landing/sectionFactoryProducts.js";
 import SectionActuality from "./landing/sectionActuality.js";
 
-//data used to create the instance
-const lightBoxData = {
-  title: "Découvez le vélomobile français",
-  lightbox: [
-    "red_yellow_bike",
-    "red_bike",
-    "purple_bike",
-    "orange_velo",
-    "orange_bike",
-    "green_bike",
-  ],
-  lightboxText: {
-    number: 2,
-    title: ["Lorem ipsum dolor", "Lorem ipsum indolor"],
-
-    text: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pellentesque ante vitae ipsum mollis tristique in quis lacus. Vestibulum ut facilisis magna, sit amet mollis ipsum. Duis ornare tempus lorem eu maximus. Suspendisse purus augue, condimentum vel mattis vitae, ullamcorper eget leo. Fusce ut pharetra tellus. Nam egestas nibh metus,",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pellentesque ante vitae ipsum mollis tristique in quis lacus. Vestibulum ut facilisis magna, sit amet mollis ipsum. Duis ornare tempus lorem eu maximus. Suspendisse purus augue, condimentum vel mattis vitae, ullamcorper eget leo. Fusce ut pharetra tellus. Nam egestas nibh metus,",
-    ],
-  },
-};
-
-const actualityData = {
-  nb_articles: 5,
-  pictures: [
-    "red_bike",
-    "purple_bike",
-    "orange_velo",
-    "orange_bike",
-    "green_bike",
-  ],
-  title: [
-    "Lorem indolore",
-    "Lorem indolore",
-    "Lorem indolore",
-    "Lorem indolore",
-    "Lorem indolore",
-  ],
-  text: [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pellentesque ante vitae ipsum mollis tristique in quis lacus. Vestibulum ut facilisis magna, sit amet mollis ipsum. Duis ornare tempus lorem eu maximus. Suspendisse purus augue, condimentum vel mattis vitae, ullamcorper eget leo. Fusce ut pharetra tellus. Nam egestas nibh metus,",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pellentesque ante vitae ipsum mollis tristique in quis lacus. Vestibulum ut facilisis magna, sit amet mollis ipsum. Duis ornare tempus lorem eu maximus. Suspendisse purus augue, condimentum vel mattis vitae, ullamcorper eget leo. Fusce ut pharetra tellus. Nam egestas nibh metus,",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pellentesque ante vitae ipsum mollis tristique in quis lacus. Vestibulum ut facilisis magna, sit amet mollis ipsum. Duis ornare tempus lorem eu maximus. Suspendisse purus augue, condimentum vel mattis vitae, ullamcorper eget leo. Fusce ut pharetra tellus. Nam egestas nibh metus,",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pellentesque ante vitae ipsum mollis tristique in quis lacus. Vestibulum ut facilisis magna, sit amet mollis ipsum. Duis ornare tempus lorem eu maximus. Suspendisse purus augue, condimentum vel mattis vitae, ullamcorper eget leo. Fusce ut pharetra tellus. Nam egestas nibh metus,",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pellentesque ante vitae ipsum mollis tristique in quis lacus. Vestibulum ut facilisis magna, sit amet mollis ipsum. Duis ornare tempus lorem eu maximus. Suspendisse purus augue, condimentum vel mattis vitae, ullamcorper eget leo. Fusce ut pharetra tellus. Nam egestas nibh metus,",
-  ],
-};
-
 //Class to create a landing page
 export default class Landing extends ManageDom {
   constructor() {
     super();
-    this.render();
+    this.init();
+  }
+  //Defer the rend after initialiation
+  async init() {
+    const data_loaded = await this.fetchData();
+    this.landingDatas = data_loaded;
+    if (this.landingDatas) {
+      //call the render method
+      this.render();
+    }
   }
   //Render Method
   render() {
@@ -71,9 +33,16 @@ export default class Landing extends ManageDom {
     //Put the body after the header
     document.body.insertBefore(main, header.nextSibling);
     //Create a new instance of each section
-    new SectionDiscoverUs(lightBoxData);
+    new SectionDiscoverUs(this.landingDatas.lightboxData);
     new SectionFactoryProducts();
-    new SectionActuality(actualityData);
+    new SectionActuality(this.landingDatas.actualityData);
+  }
+
+  async fetchData() {
+    //importation des données du json
+    const response = await fetch("./../script/datas/landingData.json");
+    const landingDatas = await response.json();
+    return landingDatas;
   }
 }
 //Create a new instance of Landing
