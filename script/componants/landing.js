@@ -26,6 +26,31 @@ const lightBoxData = {
   },
 };
 
+const actualityData = {
+  nb_articles: 5,
+  pictures: [
+    "red_bike",
+    "purple_bike",
+    "orange_velo",
+    "orange_bike",
+    "green_bike",
+  ],
+  title: [
+    "Lorem indolore",
+    "Lorem indolore",
+    "Lorem indolore",
+    "Lorem indolore",
+    "Lorem indolore",
+  ],
+  text: [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pellentesque ante vitae ipsum mollis tristique in quis lacus. Vestibulum ut facilisis magna, sit amet mollis ipsum. Duis ornare tempus lorem eu maximus. Suspendisse purus augue, condimentum vel mattis vitae, ullamcorper eget leo. Fusce ut pharetra tellus. Nam egestas nibh metus,",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pellentesque ante vitae ipsum mollis tristique in quis lacus. Vestibulum ut facilisis magna, sit amet mollis ipsum. Duis ornare tempus lorem eu maximus. Suspendisse purus augue, condimentum vel mattis vitae, ullamcorper eget leo. Fusce ut pharetra tellus. Nam egestas nibh metus,",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pellentesque ante vitae ipsum mollis tristique in quis lacus. Vestibulum ut facilisis magna, sit amet mollis ipsum. Duis ornare tempus lorem eu maximus. Suspendisse purus augue, condimentum vel mattis vitae, ullamcorper eget leo. Fusce ut pharetra tellus. Nam egestas nibh metus,",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pellentesque ante vitae ipsum mollis tristique in quis lacus. Vestibulum ut facilisis magna, sit amet mollis ipsum. Duis ornare tempus lorem eu maximus. Suspendisse purus augue, condimentum vel mattis vitae, ullamcorper eget leo. Fusce ut pharetra tellus. Nam egestas nibh metus,",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pellentesque ante vitae ipsum mollis tristique in quis lacus. Vestibulum ut facilisis magna, sit amet mollis ipsum. Duis ornare tempus lorem eu maximus. Suspendisse purus augue, condimentum vel mattis vitae, ullamcorper eget leo. Fusce ut pharetra tellus. Nam egestas nibh metus,",
+  ],
+};
+
 //Class to create a landing page
 export default class Landing extends ManageDom {
   constructor() {
@@ -45,9 +70,10 @@ export default class Landing extends ManageDom {
     const header = document.querySelector("header");
     //Put the body after the header
     document.body.insertBefore(main, header.nextSibling);
-    //Create a new instance of SectionDiscoverUs
+    //Create a new instance of each section
     new SectionDiscoverUs(lightBoxData);
     new SectionFactoryProducts();
+    new SectionActuality(actualityData);
   }
 }
 //Create a new instance of Landing

@@ -110,7 +110,7 @@ export default class SectionDiscoverUs extends ManageDom {
       const button = this.createMarkup("button", "En découvrir plus", details, [
         {
           style:
-            "width: 20%; min-width: 125px;height: 20%; margin-bottom: 30px; background-color: #007DCC; border-radius: 10px; border: none; color: white;",
+            "width: 20%; min-width: 125px;height: 20%; margin-bottom: 30px; background-color: #007DCC; border-radius: 10px; border: none; color: white; cursor: pointer;",
         },
       ]);
     }
