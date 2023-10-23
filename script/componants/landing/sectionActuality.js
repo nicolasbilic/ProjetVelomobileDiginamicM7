@@ -75,7 +75,6 @@ export default class SectionActuality extends ManageDom {
   }
   //Method that catch event
   handleEvent() {
-    // Obtenez les éléments une seule fois en dehors du gestionnaire de clic
     const firstChild = this.articles[1];
     const secondChild = this.articles[2];
     //Get parent and children width to calculate the distance to travel with the animations

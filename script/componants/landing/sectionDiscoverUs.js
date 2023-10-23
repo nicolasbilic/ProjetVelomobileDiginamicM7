@@ -6,7 +6,7 @@ export default class SectionDiscoverUs extends ManageDom {
     super();
     this.data = data;
     this.images = [];
-    this.render();
+    this.dom_element = this.render();
     this.animateLightbox();
   }
   //Render method
@@ -113,6 +113,12 @@ export default class SectionDiscoverUs extends ManageDom {
             "width: 20%; min-width: 125px;height: 20%; margin-bottom: 30px; background-color: #007DCC; border-radius: 10px; border: none; color: white; cursor: pointer;",
         },
       ]);
+      button.addEventListener("mouseenter", () => {
+        button.style.transform = "scale(1.1) ";
+      });
+      button.addEventListener("mouseleave", () => {
+        button.style.transform = "scale(1) ";
+      });
     }
   }
   //Method that animate the lightbox

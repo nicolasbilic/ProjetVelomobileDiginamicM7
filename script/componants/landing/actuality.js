@@ -46,10 +46,6 @@ export default class Actuality extends ManageDom {
           "color: white; width: 90%; height: 50px; margin-bottom :20px; background-color: #007DCC; border: none; color: white; cursor: pointer;",
       },
     ]);
-    //Hide card after index 3
-    // if (this.indexActu >= 3) {
-    //   card.style.display = "none";
-    // }
     return { card, buttonCard };
   }
   handleEvent() {
