@@ -125,7 +125,7 @@ export default class Header extends ManageDom {
         style:
           "position: relative; bottom: -25px; width: 250px ; height: 40px; font-size: 20px; color: white; background-color: #cc0000; border: none; text-decoration: none; text-align: center; items-align: center; line-height: 40px; left:5%; font-family: epilogue",
       },
-      { href: "./index.html" },
+      { href: "../../html/contact.html" },
     ]);
 
     const border = this.createMarkup("div", "", header, [
