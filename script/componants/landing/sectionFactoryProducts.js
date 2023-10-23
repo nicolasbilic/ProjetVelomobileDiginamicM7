@@ -25,11 +25,19 @@ export default class Landing extends ManageDom {
         alt: "Velomobile orange",
       },
     ]);
+    const bannerPictureHide = this.createMarkup("img", "", section, [
+      {
+        style:
+          "width: 100%;  margin: 0; max-height: 925px; object-fit: cover; position: absolute; left: 0; opacity: 0",
+        src: "./../../assets/factory.png",
+        alt: "Velomobile orange",
+      },
+    ]);
     //Create buttons container
     const bannerButtonArea = this.createMarkup("div", "", section, [
       {
         style:
-          "width: 50%; height: 80px; bottom: 0; margin: 0; position: absolute; display: flex;",
+          "width: 40%; height: 70px; bottom: 0; margin: 0; position: absolute; display: flex;",
       },
     ]);
     //Create the factory's button
@@ -56,26 +64,29 @@ export default class Landing extends ManageDom {
         },
       ]
     );
-    return { bannerPicture, buttonFactory, buttonProducts };
+    return { bannerPicture, bannerPictureHide, buttonFactory, buttonProducts };
   }
   //Method that catch event
   handleEvent() {
     const buttonFactory = this.dom_element.buttonFactory;
     const buttonProducts = this.dom_element.buttonProducts;
     const bannerPicture = this.dom_element.bannerPicture;
-    console.log(bannerPicture);
+    const bannerPictureHide = this.dom_element.bannerPictureHide;
+    bannerPicture.style.transition = "opacity 1s ";
+    bannerPictureHide.style.transition = "opacity 1s ";
     buttonFactory.addEventListener("mouseenter", () => {
       buttonFactory.style.backgroundColor = "#CC0000";
       buttonFactory.style.cursor = "pointer";
       buttonProducts.style.backgroundColor = "transparent";
-      bannerPicture.src = "./../../assets/factory.png";
+      bannerPicture.style.opacity = 0;
+      bannerPictureHide.style.opacity = 1;
     });
     buttonProducts.addEventListener("mouseenter", () => {
       buttonFactory.style.backgroundColor = "transparent";
       buttonProducts.style.backgroundColor = "#CC0000";
       buttonProducts.style.cursor = "pointer";
-      bannerPicture.style.backgroundImage = bannerPicture.src =
-        "./../../assets/orange_velomobile_bg.png";
+      bannerPicture.style.opacity = 1;
+      bannerPictureHide.style.opacity = 0;
     });
   }
 }

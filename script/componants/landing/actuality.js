@@ -8,6 +8,7 @@ export default class Actuality extends ManageDom {
     this.container = container;
     this.indexActu = indexActu;
     this.dom_element = this.render();
+    this.handleEvent();
   }
   render() {
     //Create the card container
@@ -49,6 +50,17 @@ export default class Actuality extends ManageDom {
     // if (this.indexActu >= 3) {
     //   card.style.display = "none";
     // }
-    return card;
+    return { card, buttonCard };
+  }
+  handleEvent() {
+    const buttonCard = this.dom_element.buttonCard;
+    buttonCard.addEventListener("mouseenter", () => {
+      console.log("dza");
+      buttonCard.style.transform = "scale(1.1) ";
+    });
+    buttonCard.addEventListener("mouseleave", () => {
+      console.log("dza");
+      buttonCard.style.transform = "scale(1) ";
+    });
   }
 }
