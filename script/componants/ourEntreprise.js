@@ -174,10 +174,7 @@ export default class OurEntreprise extends ManageDom {
     );
     //Return buttons + pictures
     return {
-      pictureRight,
-      pictureRightHide,
-      pictureLeft,
-      pictureLeftHide,
+      pictures: [pictureRight, pictureRightHide, pictureLeft, pictureLeftHide],
       buttonFactory,
       buttonProducts,
     };
@@ -193,11 +190,15 @@ export default class OurEntreprise extends ManageDom {
   handleEvent() {
     const buttonFactory = this.dom_element.buttonFactory;
     const buttonProducts = this.dom_element.buttonProducts;
-    const pictureRight = this.dom_element.pictureRight;
-    const pictureLeft = this.dom_element.pictureLeft;
-    this.dom_element.forEach((element) => {
-      element.style.tranform = "1s ease";
-    });
+    const pictureRight = this.dom_element.pictures[0];
+    const pictureRightHide = this.dom_element.pictures[1];
+    const pictureLeft = this.dom_element.pictures[2];
+    const pictureLeftHide = this.dom_element.pictures[3];
+
+    for (let i = 0; i < this.dom_element.pictures.length; i++) {
+      this.dom_element.pictures[i].style.transition = "opacity 1s ";
+    }
+
     //Button left listener
     buttonFactory.addEventListener("mouseenter", () => {
       buttonFactory.style.backgroundColor = "#007DCC";
@@ -211,6 +212,10 @@ export default class OurEntreprise extends ManageDom {
       buttonProducts.style.color = "white";
       buttonFactory.style.backgroundColor = "transparent";
       buttonFactory.style.color = "black";
+      pictureRight.style.opacity = 0;
+      pictureRightHide.style.opacity = 1;
+      pictureLeft.style.opacity = 0;
+      pictureLeftHide.style.opacity = 1;
     });
   }
 }
