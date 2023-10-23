@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./../style/usine.css" />
+  <title>Usine</title>
+</head>
+
+<body>
+  <main>
+    <!--------------------------------
+       1ère section visite guidée 
+    ---------------------------------->
+
+    <div class="visit">
+      <img src="./../assets/img production site.png" alt="site de production" class="prodSite" />
+      <div class="parentVisite">
+        <div class="visit-content">
+          <strong>
+            <p class="title">Une visite guidée personnalisée</p>
+          </strong><br />
+          <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing 
+            elit. Duis vehicula semper viverra. Mauris rutrum 
+            iaculis efficitur. Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit.
+          </p>
+          <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing 
+            elit. Duis vehicula semper viverra. Mauris rutrum 
+            iaculis efficitur. Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--------------------------------
+       2ème section personnes à votre écoute
+    ---------------------------------->
+
+    <div class="people">
+      <div class="parentPeople">
+        <div class="people-content">
+          <strong>
+            <p class="title">Des personnes à votre écoute</p>
+          </strong>
+          <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing 
+            elit. Duis vehicula semper viverra. Mauris rutrum 
+            iaculis efficitur. Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit.
+          </p>
+          <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing 
+            elit. Duis vehicula semper viverra. Mauris rutrum 
+            iaculis efficitur. Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit.
+          </p>
+        </div>
+      </div>
+      <img src="./../assets/img production product.png" alt="produit de l'usine" class="prodProduct" />
+    </div>
+
+    <!--------------------------------
+       3ème section réservation ticket 
+    ---------------------------------->
+    <div class="ticket">
+      <img src="./../assets/img production point.png" alt="localisation de l'usine, à Mende" class="mapSite" />
+      <form action="#" id="ticket-form">
+        <p class="title">
+          <strong>Obtenez un ticket pour visiter l'usine</strong>
+        </p>
+        <!-- champs prénom et nom -->
+        <div class="content-form-nameFields">
+          <div class="content-form-field">
+            <label for="fName"></label>
+            <input type="text" name="fName" id="fName" placeholder="Votre prénom" required />
+          </div>
+          <div class="content-form-field">
+            <label for="lName"></label>
+            <input type="text" name="lName" id="lName" placeholder="Votre nom" required />
+          </div>
+        </div>
+        <!-- champs mail et téléphone -->
+        <div class="content-form-mailNumber">
+          <div class="content-form-field">
+            <label for="mail"></label>
+            <input type="mail" name="mail" id="mail" placeholder="Votre mail" required />
+          </div>
+          <div class="content-form-field">
+            <label for="phone"></label>
+            <input type="number" name="phone" id="phone" placeholder="Votre numéro" required />
+          </div>
+        </div>
+        <button type="button">Recevoir mon ticket</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
