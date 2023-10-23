@@ -13,6 +13,7 @@ export default class Header extends ManageDom {
           "margin-bottom: 50px; width:100%; height: 330px; display:flex; flex-direction: column; align-items: center;  background-image: url('./../../assets/imgs/background.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; margin-top: 0px;",
       },
     ]);
+    document.body.insertBefore(header, document.body.firstChild);
 
     const filter = this.createMarkup("div", "", header, [
       {
@@ -58,7 +59,7 @@ export default class Header extends ManageDom {
 
     const accueil = this.createMarkup("a", "Accueil", nav, [
       { href: "../../index.html" },
-      { style: "text-decoration: none; color: white; z-index: 0;" },
+      { style: "text-decoration: none; color: white; z-index: 0;" },{}
     ]);
 
     const company = this.createMarkup("a", "Notre entreprise", nav, [
