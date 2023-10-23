@@ -10,14 +10,14 @@ export default class Header extends ManageDom {
     const header = this.createMarkup("header", "", document.body, [
       {
         style:
-          "margin-bottom: 50px; width:100%; height: 320px; display:flex; flex-direction: column; align-items: center;  background-image: url('./../../assets/imgs/background.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; margin-top: 0px;",
+          "margin-bottom: 50px; width:100%; height: 330px; display:flex; flex-direction: column; align-items: center;  background-image: url('./../../assets/imgs/background.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; margin-top: 0px;",
       },
     ]);
 
     const filter = this.createMarkup("div", "", header, [
       {
         style:
-          " width:100%; height:320px; position: absolute; display:flex; flex-direction: column; align-items: center; margin-top: 0px; background-color: black; opacity:0.65; z-index: 0;",
+          " width:100%; height:330px; position: absolute; display:flex; flex-direction: column; align-items: center; margin-top: 0px; background-color: black; opacity:0.65; z-index: 0;",
       },
     ]);
 
@@ -52,7 +52,7 @@ export default class Header extends ManageDom {
     const nav = this.createMarkup("nav", "", header, [
       {
         style:
-          "margin-bottom:50px ;width:80%; display: flex; flex-direction: row; justify-content: space-around; z-index: 0; font-family: epilogue; font-size: 16px;",
+          "margin-bottom:50px ;width:80%; display: flex; flex-direction: row; justify-content: space-around; z-index: 0; font-family: epilogue; font-size: 20px;",
       },
     ]);
 
@@ -89,14 +89,14 @@ export default class Header extends ManageDom {
     const title = this.createMarkup("span", "Vélomobiles français", header, [
       {
         style:
-          "font-size: 18px; color: white; z-index: 0; font-family: epilogue;",
+          "font-size: 22px; color: white; z-index: 0; font-family: epilogue;",
       },
     ]);
 
     const flag = this.createMarkup("div", "", header, [
       {
         style:
-          "display: flex; flex-direction: row; justify-content: center; width: 100%; z-index: 0;",
+          "display: flex; flex-direction: row; justify-content: center; width: 100%; z-index: 0; margin-bottom: 10px;",
       },
     ]);
 
@@ -122,7 +122,7 @@ export default class Header extends ManageDom {
     const contactButton = this.createMarkup("a", "Nous contacter", bottomDiv, [
       {
         style:
-          "position: relative; bottom: -25px; width: 200px ; height: 30px; font-size: 12px; color: white; background-color: #cc0000; border: none; text-decoration: none; text-align: center; items-align: center; line-height: 30px; left:5%; font-family: epilogue",
+          "position: relative; bottom: -25px; width: 250px ; height: 40px; font-size: 20px; color: white; background-color: #cc0000; border: none; text-decoration: none; text-align: center; items-align: center; line-height: 40px; left:5%; font-family: epilogue",
       },
       { href: "./index.html" },
     ]);
