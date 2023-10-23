@@ -13,7 +13,8 @@ export default class OurEntreprise extends ManageDom {
     this.datas = data_loaded;
     if (this.datas) {
       //call the render method
-      this.render();
+      this.dom_element = this.render();
+      this.handleEvent();
     }
   }
   // Method that create the render
@@ -41,7 +42,8 @@ export default class OurEntreprise extends ManageDom {
     new Cards(sectionCard, this.datas.cards.projects, "reverse");
     new Cards(sectionCard, this.datas.cards.values, "normal");
     new Cards(sectionCard, this.datas.cards.why, "reverse");
-    this.createSectionFactoryProducts(main);
+    const factoryDom_element = this.createSectionFactoryProducts(main);
+    return factoryDom_element;
   }
   //Method to create the banner area
   createBanner() {
@@ -71,13 +73,14 @@ export default class OurEntreprise extends ManageDom {
   }
   //Method that create the factory and products section
   createSectionFactoryProducts(main) {
-    //Create the cards sections
+    //Create the factory product sections
     const sectionFactoryProducts = this.createMarkup("section", "", main, [
       {
         style:
           "width: 60%; margin-bottom: 40px; display: flex; flex-direction: column; align-items: center",
       },
     ]);
+    //Create the first picture
     const pictureTop = this.createMarkup("img", "", sectionFactoryProducts, [
       {
         style: " width: 35%; height:auto;margin: 0; border-radius: 0 0 50% 50%",
@@ -85,6 +88,7 @@ export default class OurEntreprise extends ManageDom {
         alt: "Banner",
       },
     ]);
+    //Create the container for two bottoms pic
     const pictureBotContainer = this.createMarkup(
       "div",
       "",
@@ -92,24 +96,47 @@ export default class OurEntreprise extends ManageDom {
       [
         {
           style:
-            "width: 100%; display: flex; justify-content: space-between; margin-top: -150px",
+            "width: 100%; display: flex; justify-content: space-between; margin-top: -150px; position: relative;",
         },
       ]
     );
+    //Create first picture left
     const pictureLeft = this.createMarkup("img", "", pictureBotContainer, [
       {
-        style: " width: 35%; height:auto;margin: 0; border-radius: 0 50% 50% 0",
+        style:
+          " width: 35%; height:auto;margin: 0; border-radius: 0 50% 50% 0; position: absolute; left: 0;",
         src: `./../../assets/entreprise/velomobile1.png`,
         alt: "Banner",
       },
     ]);
+    //Create first picture right
     const pictureRight = this.createMarkup("img", "", pictureBotContainer, [
       {
-        style: " width: 35%; height:auto;margin: 0; border-radius: 50% 0 0 50%",
+        style:
+          " width: 35%; height:auto;margin: 0; border-radius: 50% 0 0 50%; position: absolute; right: 0;",
         src: `./../../assets/entreprise/velomobile2.png`,
         alt: "Banner",
       },
     ]);
+    //Create second picture left (hidding)
+    const pictureLeftHide = this.createMarkup("img", "", pictureBotContainer, [
+      {
+        style:
+          " width: 35%; height:auto;margin: 0; border-radius: 0 50% 50% 0; opacity: 0;",
+        src: `./../../assets/entreprise/velomobile1.png`,
+        alt: "Banner",
+      },
+    ]);
+    //Create second picture right (hidding)
+    const pictureRightHide = this.createMarkup("img", "", pictureBotContainer, [
+      {
+        style:
+          " width: 35%; height:auto;margin: 0; border-radius: 50% 0 0 50%; opacity: 0;",
+        src: `./../../assets/entreprise/velomobile2.png`,
+        alt: "Banner",
+      },
+    ]);
+    //Create the buttonn container
     const buttonContainer = this.createMarkup(
       "div",
       "",
@@ -117,10 +144,11 @@ export default class OurEntreprise extends ManageDom {
       [
         {
           style:
-            "width: 100%;  height: 50px; display: flex; justify-content: space-between; ",
+            "width: 100%;  height: 50px; display: flex; justify-content: space-between; margin-bottom: 60px;",
         },
       ]
     );
+    //Create first button
     const buttonFactory = this.createMarkup(
       "div",
       "Découvrez notre usine",
@@ -132,6 +160,7 @@ export default class OurEntreprise extends ManageDom {
         },
       ]
     );
+    //Create the second buttonn
     const buttonProducts = this.createMarkup(
       "div",
       "Découvrez notre produits",
@@ -143,12 +172,46 @@ export default class OurEntreprise extends ManageDom {
         },
       ]
     );
+    //Return buttons + pictures
+    return {
+      pictureRight,
+      pictureRightHide,
+      pictureLeft,
+      pictureLeftHide,
+      buttonFactory,
+      buttonProducts,
+    };
   }
+  //Method that call the fetch
   async fetchData() {
     //importation des données du json
     const response = await fetch("./../script/datas/ourEntreprise.json");
     const profilDatas = await response.json();
     return profilDatas;
+  }
+  //Method that catch event
+  handleEvent() {
+    const buttonFactory = this.dom_element.buttonFactory;
+    const buttonProducts = this.dom_element.buttonProducts;
+    const pictureRight = this.dom_element.pictureRight;
+    const pictureLeft = this.dom_element.pictureLeft;
+    this.dom_element.forEach((element) => {
+      element.style.tranform = "1s ease";
+    });
+    //Button left listener
+    buttonFactory.addEventListener("mouseenter", () => {
+      buttonFactory.style.backgroundColor = "#007DCC";
+      buttonFactory.style.color = "white";
+      buttonProducts.style.backgroundColor = "transparent";
+      buttonProducts.style.color = "black";
+    });
+    //Button right listener
+    buttonProducts.addEventListener("mouseenter", () => {
+      buttonProducts.style.backgroundColor = "#007DCC";
+      buttonProducts.style.color = "white";
+      buttonFactory.style.backgroundColor = "transparent";
+      buttonFactory.style.color = "black";
+    });
   }
 }
 
