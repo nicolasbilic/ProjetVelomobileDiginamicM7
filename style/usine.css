@@ -167,7 +167,7 @@ p {
     padding-left: 1px;
 }
 
-input {
+.input {
     height: 45px;
     width: 250px;
     border-radius: 8px;
