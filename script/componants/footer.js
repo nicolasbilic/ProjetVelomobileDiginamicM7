@@ -145,7 +145,7 @@ export default class Footer extends ManageDom {
 
     const send = this.createMarkup("input", "Envoyer", contactForm, [
       {type : "submit"},
-      {style: "font-weight: bold; border: none; border-radius: 5px; height: 25px; font-size: 12px; color: white; background-color: #cc0000; text-align: center; items-align: center;"},
+      {style: "cursor: pointer; font-weight: bold; border: none; border-radius: 5px; height: 25px; font-size: 12px; color: white; background-color: #cc0000; text-align: center; items-align: center;"},
     ]);
 
     document.body.appendChild(footer);
