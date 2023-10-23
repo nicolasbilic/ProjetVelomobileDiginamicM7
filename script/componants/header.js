@@ -123,7 +123,7 @@ export default class Header extends ManageDom {
     const contactButton = this.createMarkup("a", "Nous contacter", bottomDiv, [
       {
         style:
-          "position: relative; bottom: -25px; width: 250px ; height: 40px; font-size: 20px; color: white; background-color: #cc0000; border: none; text-decoration: none; text-align: center; items-align: center; line-height: 40px; left:5%; font-family: epilogue",
+          "position: relative; bottom: -25px; width: 230px ; height: 40px; font-size: 20px; color: white; background-color: #cc0000; border: none; text-decoration: none; text-align: center; items-align: center; line-height: 40px; left:5%; font-family: epilogue",
       },
       { href: "../../html/contact.html" },
     ]);
