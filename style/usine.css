@@ -17,6 +17,8 @@ p {
     padding-left: 5px;
 }
 
+/**************** 1er bloc ****************/
+
 .visit {
     display: flex;
     justify-content: space-between;
@@ -40,10 +42,28 @@ p {
     /* background-color: red; */
 }
 
+.visit-content-Guide {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.iconTourist {
+    width: auto;
+    height: 40px;
+    bottom: 6px;
+    left: 2px;
+    position: relative;
+}
+
 .prodSite {
     width: 30%;
     height: auto;
 }
+
+
+/*************** 2ème bloc *****************/
+
+
 
 .people {
     display: flex;
@@ -68,10 +88,25 @@ p {
 /*     background-color: red; */
 }
 
+.people-content-listen {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.iconTalk {
+    width: auto;
+    height: 35px;
+    left: 6px;
+    position: relative;
+}
+
 .prodProduct {
     width: 30%;
     height: auto;
 }
+
+
+/*************** 3ème bloc *****************/
 
 .ticket {
     display: flex;
@@ -93,6 +128,19 @@ p {
     flex-direction: column;
     justify-content: center;
 /*     background-color: orange; */
+}
+
+.ticket-form-book {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.iconTicket {
+    width: auto;
+    height: 30px;
+    left: 8px;
+    top: 6px;
+    position: relative;
 }
 
 .title {
