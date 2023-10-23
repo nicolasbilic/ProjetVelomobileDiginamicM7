@@ -27,24 +27,21 @@ export default class OurEntreprise extends ManageDom {
     const header = document.querySelector("header");
     document.body.insertBefore(main, header.nextSibling);
     //Call the instance of presentationSection
-    console.log(this.datas);
     new PresentationSection(this.datas);
-    //Take a delay for the end of the presentation Render
-    setTimeout(() => {
-      //Create the banner area
-      this.createBanner();
-      //Create the section for cards
-      const sectionCard = this.createMarkup("section", "", main, [
-        {
-          style:
-            "width: 100%; height: auto; ; margin-bottom: 40px; display: flex; flex-direction: column; align-items: center",
-        },
-      ]);
-      new Cards(sectionCard, this.datas.cards.projects, "reverse");
-      new Cards(sectionCard, this.datas.cards.values, "normal");
-      new Cards(sectionCard, this.datas.cards.why, "reverse");
-    }, 100);
-    //Create the cards sections
+    //Create the banner area
+    this.createBanner();
+    //Create the section for cards
+    const sectionCard = this.createMarkup("section", "", main, [
+      {
+        style:
+          "width: 100%; height: auto; ; margin-bottom: 40px; display: flex; flex-direction: column; align-items: center",
+      },
+    ]);
+    //Create the cards instance
+    new Cards(sectionCard, this.datas.cards.projects, "reverse");
+    new Cards(sectionCard, this.datas.cards.values, "normal");
+    new Cards(sectionCard, this.datas.cards.why, "reverse");
+    this.createSectionFactoryProducts(main);
   }
   //Method to create the banner area
   createBanner() {
@@ -73,6 +70,15 @@ export default class OurEntreprise extends ManageDom {
     ]);
   }
 
+  createSectionFactoryProducts(main) {
+    //Create the cards sections
+    const sectionFactoryProducts = this.createMarkup("section", "", main, [
+      {
+        style:
+          "width: 60%; background-color: black; margin-bottom: 40px; display: flex; flex-direction: column; align-items: center",
+      },
+    ]);
+  }
   async fetchData() {
     //importation des données du json
     const response = await fetch("./../script/datas/ourEntreprise.json");
