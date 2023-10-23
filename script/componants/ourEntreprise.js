@@ -2,6 +2,7 @@ import ManageDom from "./ManageDom.js";
 import PresentationSection from "./ourEntreprise/PresentationSection.js";
 import Cards from "./ourEntreprise/cards.js";
 
+//Class to creat OurEntreprise page
 export default class OurEntreprise extends ManageDom {
   constructor() {
     super();
@@ -194,11 +195,10 @@ export default class OurEntreprise extends ManageDom {
     const pictureRightHide = this.dom_element.pictures[1];
     const pictureLeft = this.dom_element.pictures[2];
     const pictureLeftHide = this.dom_element.pictures[3];
-
+    //Loop to add style transition to each picture
     for (let i = 0; i < this.dom_element.pictures.length; i++) {
       this.dom_element.pictures[i].style.transition = "opacity 1s ";
     }
-
     //Button left listener
     buttonFactory.addEventListener("mouseenter", () => {
       buttonFactory.style.backgroundColor = "#007DCC";
