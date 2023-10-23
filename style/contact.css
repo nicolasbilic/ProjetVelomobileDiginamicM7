@@ -46,7 +46,7 @@ body {
 ::placeholder {
     color: #606262;
     font-weight: 600;
-    padding : 5px;
+    padding-left: 1px;
 }
 
 textarea {
@@ -66,6 +66,8 @@ input {
     border-radius: 8px;
     border: none;
     background-color: #ecf5f6;
+    font-weight: bold;
+    padding-left: 5px;
 }
 
 button {
