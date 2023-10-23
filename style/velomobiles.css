@@ -17,13 +17,14 @@ body {
         padding: 0 30px;
 
         .title {
-            font-size: 18px;
+            font-size: 22px;
             font-weight: bold;
         }
 
         span {
             margin-bottom: 20px;
             display: block;
+            font-size: 20px;
         }
     }
 
@@ -37,7 +38,7 @@ body {
 button {
     width: 300px;
     height: 50px;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     color: white;
     background-color: #007DCC;
@@ -72,7 +73,7 @@ button {
 
         .title {
             display: flex;
-            font-size: 16px;
+            font-size: 22px;
             font-weight: bold;
 
             .img-container {
@@ -87,11 +88,11 @@ button {
                 }
             }
         }
-
+        
         span {
             display: block;
             margin-bottom: 10px;
-            font-size: 14px;
+            font-size: 22px;
         }
     }
 }
