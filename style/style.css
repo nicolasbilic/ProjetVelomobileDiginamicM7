@@ -12,3 +12,39 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Shrikhand', serif;
     font-family: 'Ubuntu', sans-serif;
 }
+
+@keyframes velomobile {
+    0% {transform: scaleX(1)}
+    29%{
+        left:85%;
+        transform: scaleX(1)
+    }
+    30%{transform: scaleX(-1)}
+    59%{
+        left:10%;
+        transform: scaleX(-1)
+    }
+    60% {
+        left:10%;
+        transform: scaleX(1)
+    }
+    100%{}
+}
+
+@keyframes velomobile {
+    0% {transform: scaleX(1)}
+    29%{
+        left:85%;
+        transform: scaleX(1)
+    }
+    30%{transform: scaleX(-1)}
+    59%{
+        left:10%;
+        transform: scaleX(-1)
+    }
+    60% {
+        left:10%;
+        transform: scaleX(1)
+    }
+    100%{}
+}
