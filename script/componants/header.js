@@ -57,17 +57,17 @@ export default class Header extends ManageDom {
     ]);
 
     const accueil = this.createMarkup("a", "Accueil", nav, [
-      { href: "" },
+      { href: "../../index.html" },
       { style: "text-decoration: none; color: white; z-index: 0;" },
     ]);
 
     const company = this.createMarkup("a", "Notre entreprise", nav, [
-      { href: "" },
+      { href: "../../html/ourEntreprise.html" },
       { style: "text-decoration: none; color: white; z-index: 0;" },
     ]);
 
     const factory = this.createMarkup("a", "Notre usine", nav, [
-      { href: "" },
+      { href: "../../html/usine.html" },
       { style: "text-decoration: none; color: white; z-index: 0;" },
     ]);
 
@@ -76,13 +76,13 @@ export default class Header extends ManageDom {
       "Découvrir nos vélomobiles",
       nav,
       [
-        { href: "" },
+        { href: "../../html/velomobiles.html" },
         { style: "text-decoration: none; color: white; z-index: 0;" },
       ]
     );
 
     const contact = this.createMarkup("a", "Contact", nav, [
-      { href: "" },
+      { href: "../../html/contact.html" },
       { style: "text-decoration: none; color: white; z-index: 0;" },
     ]);
 
