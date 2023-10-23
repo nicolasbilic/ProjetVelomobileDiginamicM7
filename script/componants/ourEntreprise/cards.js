@@ -21,7 +21,7 @@ export default class Cards extends ManageDom {
     const cardPicture = this.createMarkup("img", "", cardBody, [
       {
         style: "width: 50%; height:auto; margin: 0; ",
-        src: `./../../assets/entreprise/${this.datas.picture}`,
+        src: `./../../assets/imgs/entreprise/${this.datas.picture}`,
         alt: "Banner",
       },
     ]);
