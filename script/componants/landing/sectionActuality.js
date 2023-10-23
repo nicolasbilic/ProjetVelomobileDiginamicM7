@@ -39,7 +39,7 @@ export default class SectionActuality extends ManageDom {
       {
         style:
           "width: auto; height: auto; transform: scaleX(-1); position:absolute; left: 0; opacity: 0;",
-        src: `./../../assets/arrowside.png`,
+        src: `./../../assets/imgs/arrowside.png`,
         alt: `arrowLeft`,
       },
     ]);
@@ -48,7 +48,7 @@ export default class SectionActuality extends ManageDom {
       {
         style:
           "width: auto; height: auto; cursor: pointer;  position:absolute; right: 0; overflow: visible",
-        src: `./../../assets/arrowside.png`,
+        src: `./../../assets/imgs/arrowside.png`,
         alt: `arrowRight`,
       },
     ]);

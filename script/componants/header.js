@@ -10,7 +10,7 @@ export default class Header extends ManageDom {
     const header = this.createMarkup("header", "", document.body, [
       {
         style:
-          "width:100%; height: 320px; display:flex; flex-direction: column; align-items: center;  background-image: url('./../../assets/background.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; margin-top: 0px;",
+          "width:100%; height: 320px; display:flex; flex-direction: column; align-items: center;  background-image: url('./../../assets/imgs/background.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; margin-top: 0px;",
       },
     ]);
 
@@ -22,7 +22,7 @@ export default class Header extends ManageDom {
     ]);
 
     const headLogo = this.createMarkup("img", "", header, [
-      { src: "../../assets/logo_client.png" },
+      { src: "../../assets/imgs/logo_client.png" },
       { width: "150" },
       { height: "auto" },
       { style: "z-index: 0;" },
@@ -36,7 +36,7 @@ export default class Header extends ManageDom {
     ]);
 
     const gif = this.createMarkup("img", "", divGif, [
-      { src: "../../assets/logo_client_v2.gif" },
+      { src: "../../assets/imgs/logo_client_v2.gif" },
       { width: "80" },
       { height: "auto" },
       {

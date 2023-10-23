@@ -64,7 +64,7 @@ export default class SectionDiscoverUs extends ManageDom {
         {
           style:
             "width: 100%; max-width: 455px; max-height: 455px; margin: 0; position: absolute; object-fit: contain; top:50%; transform: translateY(-50%);",
-          src: `./../../assets/${element}.png`,
+          src: `./../../assets/imgs/${element}.png`,
           alt: `${element}`,
         },
       ]);

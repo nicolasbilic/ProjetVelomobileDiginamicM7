@@ -21,7 +21,7 @@ export default class Landing extends ManageDom {
     const bannerPicture = this.createMarkup("img", "", section, [
       {
         style: "width: 100%;  margin: 0; max-height: 925px; object-fit: cover;",
-        src: "./../../assets/orange_velomobile_bg.png",
+        src: "./../../assets/imgs/orange_velomobile_bg.png",
         alt: "Velomobile orange",
       },
     ]);
