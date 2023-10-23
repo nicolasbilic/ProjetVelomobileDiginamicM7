@@ -29,7 +29,7 @@ export default class Landing extends ManageDom {
       {
         style:
           "width: 100%;  margin: 0; max-height: 925px; object-fit: cover; position: absolute; left: 0; opacity: 0",
-        src: "./../../assets/factory.png",
+        src: "./../../assets/imgs/factory.png",
         alt: "Velomobile orange",
       },
     ]);
