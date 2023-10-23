@@ -69,15 +69,80 @@ export default class OurEntreprise extends ManageDom {
       },
     ]);
   }
-
+  //Method that create the factory and products section
   createSectionFactoryProducts(main) {
     //Create the cards sections
     const sectionFactoryProducts = this.createMarkup("section", "", main, [
       {
         style:
-          "width: 60%; background-color: black; margin-bottom: 40px; display: flex; flex-direction: column; align-items: center",
+          "width: 60%; margin-bottom: 40px; display: flex; flex-direction: column; align-items: center",
       },
     ]);
+    const pictureTop = this.createMarkup("img", "", sectionFactoryProducts, [
+      {
+        style: " width: 35%; height:auto;margin: 0; border-radius: 0 0 50% 50%",
+        src: `./../../assets/entreprise/factory.png`,
+        alt: "Banner",
+      },
+    ]);
+    const pictureBotContainer = this.createMarkup(
+      "div",
+      "",
+      sectionFactoryProducts,
+      [
+        {
+          style:
+            "width: 100%; display: flex; justify-content: space-between; margin-top: -150px",
+        },
+      ]
+    );
+    const pictureLeft = this.createMarkup("img", "", pictureBotContainer, [
+      {
+        style: " width: 35%; height:auto;margin: 0; border-radius: 0 50% 50% 0",
+        src: `./../../assets/entreprise/velomobile1.png`,
+        alt: "Banner",
+      },
+    ]);
+    const pictureRight = this.createMarkup("img", "", pictureBotContainer, [
+      {
+        style: " width: 35%; height:auto;margin: 0; border-radius: 50% 0 0 50%",
+        src: `./../../assets/entreprise/velomobile2.png`,
+        alt: "Banner",
+      },
+    ]);
+    const buttonContainer = this.createMarkup(
+      "div",
+      "",
+      sectionFactoryProducts,
+      [
+        {
+          style:
+            "width: 100%;  height: 50px; display: flex; justify-content: space-between; ",
+        },
+      ]
+    );
+    const buttonFactory = this.createMarkup(
+      "div",
+      "Découvrez notre usine",
+      buttonContainer,
+      [
+        {
+          style:
+            "width: 50%;  height: 100%; cursor: pointer; display: flex; justify-content: center; align-items: center; border: 2px solid #007DCC; font-weight: bold; font-size: 26px;",
+        },
+      ]
+    );
+    const buttonProducts = this.createMarkup(
+      "div",
+      "Découvrez notre produits",
+      buttonContainer,
+      [
+        {
+          style:
+            "width: 50%;  height: 100%; cursor: pointer; display: flex; justify-content: center; align-items: center; background-color:#007DCC;  border: 2px solid #007DCC; color: white; font-weight: bold; font-size: 26px;",
+        },
+      ]
+    );
   }
   async fetchData() {
     //importation des données du json
