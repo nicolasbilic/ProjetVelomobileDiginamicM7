@@ -105,7 +105,7 @@ export default class OurEntreprise extends ManageDom {
     const pictureLeft = this.createMarkup("img", "", pictureBotContainer, [
       {
         style:
-          " width: 35%; max-height:100%; margin: 0; border-radius: 0 50% 50% 0; position: absolute; left: 0; bottom: 0;",
+          " width: 35%; max-height: 100%; margin: 0; border-radius: 0 50% 0 0;  contain; position: absolute; left: 0; bottom: 0;",
         src: `./../../assets/imgs/entreprise/velomobile1.png`,
         alt: "Image bas gauche",
       },
@@ -114,7 +114,7 @@ export default class OurEntreprise extends ManageDom {
     const pictureRight = this.createMarkup("img", "", pictureBotContainer, [
       {
         style:
-          " width: 35%; height:auto; margin: 0; border-radius: 50% 0 0 50%; position: absolute; right: 0;",
+          " width: 35%; margin: 0; border-radius:  50% 0 0 0;  contain; position: absolute; right: 0; bottom: 0;",
         src: `./../../assets/imgs/entreprise/velomobile2.png`,
         alt: "Image bas droite",
       },
@@ -123,8 +123,8 @@ export default class OurEntreprise extends ManageDom {
     const pictureLeftHide = this.createMarkup("img", "", pictureBotContainer, [
       {
         style:
-          " width: 35%; height:auto; margin: 0; border-radius: 0 50% 50% 0; opacity: 0;",
-        src: `./../../assets/imgs/entreprise/projet.png`,
+          " width: 35%; height:100%; margin: 0; border-radius: 0 50% 0 0; opacity: 0;",
+        src: `./../../assets/imgs/entreprise/lvf1.png`,
         alt: "Image bas gauche",
       },
     ]);
@@ -132,8 +132,8 @@ export default class OurEntreprise extends ManageDom {
     const pictureRightHide = this.createMarkup("img", "", pictureBotContainer, [
       {
         style:
-          " width: 35%; height:auto;margin: 0; border-radius: 50% 0 0 50%;  opacity: 0;",
-        src: `./../../assets/imgs/entreprise/factory.png`,
+          " width: 35%; height:auto;margin: 0; border-radius: 50% 0 0 0;  opacity: 0;",
+        src: `./../../assets/imgs/entreprise/lvf2.png`,
         alt: "Image bas droite",
       },
     ]);
@@ -157,7 +157,7 @@ export default class OurEntreprise extends ManageDom {
       [
         {
           style:
-            "width: 50%;  height: 100%; cursor: pointer; display: flex; justify-content: center; align-items: center; border: 2px solid #007DCC; font-weight: bold; font-size: 26px;",
+            "width: 50%;  height: 100%; cursor: pointer; display: flex; justify-content: center; align-items: center; border: 2px solid #007DCC; background-color:#007DCC; color: white; font-weight: bold; font-size: 26px;",
         },
       ]
     );
@@ -169,7 +169,7 @@ export default class OurEntreprise extends ManageDom {
       [
         {
           style:
-            "width: 50%;  height: 100%; cursor: pointer; display: flex; justify-content: center; align-items: center; background-color:#007DCC;  border: 2px solid #007DCC; color: white; font-weight: bold; font-size: 26px;",
+            "width: 50%;  height: 100%; cursor: pointer; display: flex; justify-content: center; align-items: center; border: 2px solid #007DCC; font-weight: bold; font-size: 26px;",
         },
       ]
     );

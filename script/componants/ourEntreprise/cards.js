@@ -58,6 +58,9 @@ export default class Cards extends ManageDom {
       cardBody.style.flexDirection = "row-reverse";
       cardSpan.style.right = "";
       cardSpan.style.left = "0";
+      textBody.style.marginLeft = "0";
+      textBody.style.marginRight = "20px";
+      textBody.style.textAlign = "left";
     }
   }
 }

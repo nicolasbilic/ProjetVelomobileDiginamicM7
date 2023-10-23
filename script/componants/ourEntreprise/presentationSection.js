@@ -53,7 +53,7 @@ export default class PresentationSection extends ManageDom {
     const profilPicture = this.createMarkup("img", "", containerProfil, [
       {
         style:
-          " width: 25%; height:auto;margin: 0; border-radius: 50%; background-color:black; object-fit: conain; z-index:2",
+          " width: 25%; height:auto;margin: 0; border-radius: 50%; background-color:black; z-index:2",
         src: `./../../assets/imgs/profil/${profil}.png`,
         alt: `${profil}`,
       },
@@ -62,10 +62,10 @@ export default class PresentationSection extends ManageDom {
     const detailsContainer = this.createMarkup("div", "", containerProfil, [
       {
         style:
-          "width:100%; box-sizing: border-box;  height: auto; max-height: 220px; background-color: #EFEFEF; border-radius: 10px; overflow: hidden; position: absolute",
+          "width:100%; box-sizing: border-box;  height: auto; max-height: 220px; background-color: #EFEFEF; border-radius: 250px 0 0 250px; overflow: hidden; position: absolute",
       },
     ]);
-
+    //Create the profil name
     const profilName = this.createMarkup(
       "h2",
       profilDataFiltered.name,
@@ -77,6 +77,7 @@ export default class PresentationSection extends ManageDom {
         },
       ]
     );
+    //Create the status
     const profilStatus = this.createMarkup(
       "h2",
       profilDataFiltered.status,
@@ -88,6 +89,7 @@ export default class PresentationSection extends ManageDom {
         },
       ]
     );
+    //Create the p
     const profilText = this.createMarkup(
       "p",
       profilDataFiltered.details,
@@ -99,13 +101,13 @@ export default class PresentationSection extends ManageDom {
         },
       ]
     );
-
     detailsContainer.style.paddingLeft = "25%";
     //Reverse if order = reverse
     if (order === "reverse") {
       containerProfil.style.flexDirection = "row-reverse";
       detailsContainer.style.paddingLeft = "0%";
       detailsContainer.style.paddingRight = "25%";
+      detailsContainer.style.borderRadius = "0 250px 250px 0";
     }
   }
 }
