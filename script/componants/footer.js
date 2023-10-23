@@ -22,23 +22,23 @@ export default class Footer extends ManageDom {
     ]); 
 
     const accueil = this.createMarkup("a", "Accueil", pagesDiv, [
-      { href: ""}, {style: "text-decoration: none; color: white;"}
+      { href: "../../index.html"}, {style: "text-decoration: none; color: white;"}
     ]);
 
     const company = this.createMarkup("a", "Notre entreprise", pagesDiv, [
-      { href: ""}, {style: "text-decoration: none; color: white;"}
+      { href: "../../html/ourEntreprise.html"}, {style: "text-decoration: none; color: white;"}
     ]);
 
     const factory = this.createMarkup("a", "Notre usine", pagesDiv, [
-      { href: ""}, {style: "text-decoration: none; color: white;"}
+      { href: "../../html/usine.html"}, {style: "text-decoration: none; color: white;"}
     ]);
 
     const velomobiles = this.createMarkup("a", "Découvrir nos vélomobiles", pagesDiv, [
-      { href: ""}, {style: "text-decoration: none; color: white;"}
+      { href: "../../html/velomobiles.html"}, {style: "text-decoration: none; color: white;"}
     ]);
 
     const contact = this.createMarkup("a", "Contact", pagesDiv, [
-      { href: ""}, {style: "text-decoration: none; color: white;"}
+      { href: "../../html/contact.html"}, {style: "text-decoration: none; color: white;"}
     ]);
 
     const salesAndSocialDiv = this.createMarkup("div", "", footer, [
