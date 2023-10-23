@@ -1,6 +1,5 @@
 body {
-    margin: 0;
-    padding: 0;
+    font-family: "Epilogue";
 }
 
 main {
@@ -11,7 +10,7 @@ main {
 }
 
 p {
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .text {
@@ -78,7 +77,8 @@ p {
     display: flex;
     justify-content: space-between;
     width: 70%;
-/*     background-color: pink; */
+    /* background-color: pink; */
+    padding-bottom: 50px;
 }
 
 .mapSite {
@@ -96,7 +96,7 @@ p {
 }
 
 .title {
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 15px;
     margin-bottom: 0px;
 }
@@ -140,4 +140,9 @@ button {
     text-align: center;
     margin-top: 15px;
     padding: 0;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    cursor: pointer;
 }
