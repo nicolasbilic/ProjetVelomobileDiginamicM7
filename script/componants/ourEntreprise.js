@@ -104,16 +104,16 @@ export default class OurEntreprise extends ManageDom {
     const pictureLeft = this.createMarkup("img", "", pictureBotContainer, [
       {
         style:
-          " width: 35%; height:auto;margin: 0; border-radius: 0 50% 50% 0; position: absolute; left: 0;",
+          " width: 35%; max-height:100%; margin: 0; border-radius: 0 50% 50% 0; position: absolute; left: 0; bottom: 0;",
         src: `./../../assets/entreprise/velomobile1.png`,
-        alt: "Banner",
+        alt: "Picture bottom left",
       },
     ]);
     //Create first picture right
     const pictureRight = this.createMarkup("img", "", pictureBotContainer, [
       {
         style:
-          " width: 35%; height:auto;margin: 0; border-radius: 50% 0 0 50%; position: absolute; right: 0;",
+          " width: 35%; height:auto; margin: 0; border-radius: 50% 0 0 50%; position: absolute; right: 0;",
         src: `./../../assets/entreprise/velomobile2.png`,
         alt: "Banner",
       },
@@ -122,8 +122,8 @@ export default class OurEntreprise extends ManageDom {
     const pictureLeftHide = this.createMarkup("img", "", pictureBotContainer, [
       {
         style:
-          " width: 35%; height:auto;margin: 0; border-radius: 0 50% 50% 0; opacity: 0;",
-        src: `./../../assets/entreprise/velomobile1.png`,
+          " width: 35%; height:auto; margin: 0; border-radius: 0 50% 50% 0; opacity: 0;",
+        src: `./../../assets/entreprise/projet.png`,
         alt: "Banner",
       },
     ]);
@@ -131,8 +131,8 @@ export default class OurEntreprise extends ManageDom {
     const pictureRightHide = this.createMarkup("img", "", pictureBotContainer, [
       {
         style:
-          " width: 35%; height:auto;margin: 0; border-radius: 50% 0 0 50%; opacity: 0;",
-        src: `./../../assets/entreprise/velomobile2.png`,
+          " width: 35%; height:auto;margin: 0; border-radius: 50% 0 0 50%;  opacity: 0;",
+        src: `./../../assets/entreprise/factory.png`,
         alt: "Banner",
       },
     ]);
@@ -205,6 +205,10 @@ export default class OurEntreprise extends ManageDom {
       buttonFactory.style.color = "white";
       buttonProducts.style.backgroundColor = "transparent";
       buttonProducts.style.color = "black";
+      pictureRight.style.opacity = 1;
+      pictureRightHide.style.opacity = 0;
+      pictureLeft.style.opacity = 1;
+      pictureLeftHide.style.opacity = 0;
     });
     //Button right listener
     buttonProducts.addEventListener("mouseenter", () => {
