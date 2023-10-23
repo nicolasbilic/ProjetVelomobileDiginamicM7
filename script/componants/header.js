@@ -10,7 +10,7 @@ export default class Header extends ManageDom {
     const header = this.createMarkup("header", "", document.body, [
       {
         style:
-          "width:100%; height: 320px; display:flex; flex-direction: column; align-items: center;  background-image: url('./../../assets/imgs/background.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; margin-top: 0px;",
+          "margin-bottom: 50px; width:100%; height: 320px; display:flex; flex-direction: column; align-items: center;  background-image: url('./../../assets/imgs/background.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; margin-top: 0px;",
       },
     ]);
 
@@ -41,7 +41,7 @@ export default class Header extends ManageDom {
       { height: "auto" },
       {
         style:
-          "position: relative; left:10% ; bottom: 0; animation: velomobile 8s infinite ease-in-out;",
+          "position: relative; left:10% ; bottom: -10px; animation: velomobile 8s infinite ease-in-out;",
       },
     ]);
 
@@ -122,15 +122,15 @@ export default class Header extends ManageDom {
     const contactButton = this.createMarkup("a", "Nous contacter", bottomDiv, [
       {
         style:
-          "position: relative; bottom: -45px; width: 200px ; height: 30px; font-size: 12px; color: white; background-color: #cc0000; border: none; text-decoration: none; text-align: center; items-align: center; line-height: 30px; left:5%; font-family: epilogue",
+          "position: relative; bottom: -25px; width: 200px ; height: 30px; font-size: 12px; color: white; background-color: #cc0000; border: none; text-decoration: none; text-align: center; items-align: center; line-height: 30px; left:5%; font-family: epilogue",
       },
       { href: "./index.html" },
     ]);
 
-    const border = this.createMarkup("div", "", document.body, [
+    const border = this.createMarkup("div", "", header, [
       {
         style:
-          "position: relative; top: 0; width: 100%; height: 20px; background-color: #007dcc;",
+          "position: relative; bottom: -25px; width: 100%; height: 20px; background-color: #007dcc;",
       },
     ]);
   }
