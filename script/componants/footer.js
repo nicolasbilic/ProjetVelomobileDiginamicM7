@@ -14,7 +14,7 @@ export default class Footer extends ManageDom {
       },
     ]);
     const logo = this.createMarkup("img", "", footer, [
-      { src: "../../assets/logo_client.png" },{ width: "200"}, {height: "auto"},
+      { src: "../../assets/imgs/logo_client.png" },{ width: "200"}, {height: "auto"},
     ]);
 
     const pagesDiv = this.createMarkup("div", "", footer, [
@@ -78,7 +78,7 @@ export default class Footer extends ManageDom {
       {href : ""}
     ]);
     const linkedinImg = this.createMarkup("img", "", linkedinLink, [
-      { src: "../../assets/linkedin.png" },{ width: "40"}, {height: "auto"},
+      { src: "../../assets/imgs/linkedin.png" },{ width: "40"}, {height: "auto"},
     ]);
 
     const fbLink = this.createMarkup("a", "", socialDiv, [
@@ -86,7 +86,7 @@ export default class Footer extends ManageDom {
     ]);
 
     const fbImg = this.createMarkup("img", "", fbLink, [
-      { src: "../../assets/fb.png" },{ width: "40"}, {height: "auto"},
+      { src: "../../assets/imgs/fb.png" },{ width: "40"}, {height: "auto"},
     ]);
 
     const instagramLink = this.createMarkup("a", "", socialDiv, [
@@ -94,7 +94,7 @@ export default class Footer extends ManageDom {
     ]);
 
     const instagramImg = this.createMarkup("img", "", instagramLink, [
-      { src: "../../assets/instagram.png" },{ width: "40"}, {height: "auto"},
+      { src: "../../assets/imgs/instagram.png" },{ width: "40"}, {height: "auto"},
     ]);
 
     const contactDiv = this.createMarkup("div", "", footer, [

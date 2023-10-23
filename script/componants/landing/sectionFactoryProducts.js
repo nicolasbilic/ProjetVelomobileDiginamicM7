@@ -21,7 +21,7 @@ export default class Landing extends ManageDom {
     const bannerPicture = this.createMarkup("img", "", section, [
       {
         style: "width: 100%;  margin: 0; max-height: 925px; object-fit: cover;",
-        src: "./../../assets/orange_velomobile_bg.png",
+        src: "./../../assets/imgs/orange_velomobile_bg.png",
         alt: "Velomobile orange",
       },
     ]);
@@ -68,14 +68,14 @@ export default class Landing extends ManageDom {
       buttonFactory.style.backgroundColor = "#CC0000";
       buttonFactory.style.cursor = "pointer";
       buttonProducts.style.backgroundColor = "transparent";
-      bannerPicture.src = "./../../assets/factory.png";
+      bannerPicture.src = "./../../assets/imgs/factory.png";
     });
     buttonProducts.addEventListener("mouseenter", () => {
       buttonFactory.style.backgroundColor = "transparent";
       buttonProducts.style.backgroundColor = "#CC0000";
       buttonProducts.style.cursor = "pointer";
       bannerPicture.style.backgroundImage = bannerPicture.src =
-        "./../../assets/orange_velomobile_bg.png";
+        "./../../assets/imgs/orange_velomobile_bg.png";
     });
   }
 }

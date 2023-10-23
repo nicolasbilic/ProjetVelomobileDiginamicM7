@@ -21,7 +21,7 @@ export default class Actuality extends ManageDom {
     const cardPicture = this.createMarkup("img", "", card, [
       {
         style: "width: 100%;  margin: 0;  object-fit: cover;",
-        src: `./../../assets/${this.data.picture}.png`,
+        src: `./../../assets/imgs/${this.data.picture}.png`,
         alt: `${this.data.picture}`,
       },
     ]);
