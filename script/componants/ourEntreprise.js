@@ -157,19 +157,19 @@ export default class OurEntreprise extends ManageDom {
       [
         {
           style:
-            "width: 50%;  height: 100%; cursor: pointer; display: flex; justify-content: center; align-items: center; border: 2px solid #007DCC; background-color:#007DCC; color: white; font-weight: bold; font-size: 26px;",
+            "width: 50%;  height: 100%; cursor: pointer; display: flex; justify-content: center; align-items: center; border: 2px solid #007DCC; background-color:#007DCC; color: white; font-weight: bold; font-size: 20px;",
         },
       ]
     );
     //Create the second buttonn
     const buttonProducts = this.createMarkup(
       "div",
-      "Découvrez notre produits",
+      "Découvrez nos produits",
       buttonContainer,
       [
         {
           style:
-            "width: 50%;  height: 100%; cursor: pointer; display: flex; justify-content: center; align-items: center; border: 2px solid #007DCC; font-weight: bold; font-size: 26px;",
+            "width: 50%;  height: 100%; cursor: pointer; display: flex; justify-content: center; align-items: center; border: 2px solid #007DCC; font-weight: bold; font-size: 20px;",
         },
       ]
     );

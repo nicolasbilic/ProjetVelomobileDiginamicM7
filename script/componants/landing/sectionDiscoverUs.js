@@ -15,7 +15,7 @@ export default class SectionDiscoverUs extends ManageDom {
     const section = this.createSection();
     //add title
     const h1 = this.createMarkup("h1", this.data.title, section, [
-      { style: "margin-bottom:40px;" },
+      { style: "margin-bottom:40px; margin-top: 0;" },
     ]);
     //Create the lightbox and text area
     const lightBoxAndText = this.createMarkup("div", "", section, [

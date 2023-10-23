@@ -48,7 +48,7 @@ export default class Landing extends ManageDom {
       [
         {
           style:
-            "width: 50%; height: 80px; background-color: none; bottom: 0; margin: 0; border: 2px solid #CC0000; color: white; display: flex; justify-content: center; align-items: center; font-size: 30px; font-weight: bold;",
+            "width: 50%; height: 80px; background-color: none; bottom: 0; margin: 0; border: 2px solid #CC0000; color: white; display: flex; justify-content: center; align-items: center; font-size: 22px; font-weight: bold;",
         },
       ]
     );
@@ -60,7 +60,7 @@ export default class Landing extends ManageDom {
       [
         {
           style:
-            "width: 50%; height: 80px; background-color: #CC0000; bottom: 0; margin: 0; border: 2px solid #CC0000; color: white; display: flex; justify-content: center; align-items: center; font-size: 30px; font-weight: bold;",
+            "width: 50%; height: 80px; background-color: #CC0000; bottom: 0; margin: 0; border: 2px solid #CC0000; color: white; display: flex; justify-content: center; align-items: center; font-size: 22px; font-weight: bold;",
         },
       ]
     );
