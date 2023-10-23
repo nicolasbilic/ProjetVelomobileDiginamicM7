@@ -54,7 +54,7 @@ export default class PresentationSection extends ManageDom {
       {
         style:
           " width: 25%; height:auto;margin: 0; border-radius: 50%; background-color:black; object-fit: conain; z-index:2",
-        src: `./../../assets/profil/${profil}.png`,
+        src: `./../../assets/imgs/profil/${profil}.png`,
         alt: `${profil}`,
       },
     ]);

@@ -60,7 +60,7 @@ export default class OurEntreprise extends ManageDom {
     const bannerPicture = this.createMarkup("img", "", main, [
       {
         style: " width: 100%; height:auto;margin: 0; ",
-        src: `./../../assets/LVFQ.jpg`,
+        src: `./../../assets/imgs/LVFQ.jpg`,
         alt: "Banner",
       },
     ]);
@@ -85,7 +85,7 @@ export default class OurEntreprise extends ManageDom {
     const pictureTop = this.createMarkup("img", "", sectionFactoryProducts, [
       {
         style: " width: 35%; height:auto;margin: 0; border-radius: 0 0 50% 50%",
-        src: `./../../assets/entreprise/factory.png`,
+        src: `./../../assets/imgs/entreprise/factory.png`,
         alt: "Banner",
       },
     ]);
@@ -106,8 +106,8 @@ export default class OurEntreprise extends ManageDom {
       {
         style:
           " width: 35%; max-height:100%; margin: 0; border-radius: 0 50% 50% 0; position: absolute; left: 0; bottom: 0;",
-        src: `./../../assets/entreprise/velomobile1.png`,
-        alt: "Picture bottom left",
+        src: `./../../assets/imgs/entreprise/velomobile1.png`,
+        alt: "Image bas gauche",
       },
     ]);
     //Create first picture right
@@ -115,8 +115,8 @@ export default class OurEntreprise extends ManageDom {
       {
         style:
           " width: 35%; height:auto; margin: 0; border-radius: 50% 0 0 50%; position: absolute; right: 0;",
-        src: `./../../assets/entreprise/velomobile2.png`,
-        alt: "Banner",
+        src: `./../../assets/imgs/entreprise/velomobile2.png`,
+        alt: "Image bas droite",
       },
     ]);
     //Create second picture left (hidding)
@@ -124,8 +124,8 @@ export default class OurEntreprise extends ManageDom {
       {
         style:
           " width: 35%; height:auto; margin: 0; border-radius: 0 50% 50% 0; opacity: 0;",
-        src: `./../../assets/entreprise/projet.png`,
-        alt: "Banner",
+        src: `./../../assets/imgs/entreprise/projet.png`,
+        alt: "Image bas gauche",
       },
     ]);
     //Create second picture right (hidding)
@@ -133,8 +133,8 @@ export default class OurEntreprise extends ManageDom {
       {
         style:
           " width: 35%; height:auto;margin: 0; border-radius: 50% 0 0 50%;  opacity: 0;",
-        src: `./../../assets/entreprise/factory.png`,
-        alt: "Banner",
+        src: `./../../assets/imgs/entreprise/factory.png`,
+        alt: "Image bas droite",
       },
     ]);
     //Create the buttonn container
