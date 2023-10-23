@@ -102,6 +102,7 @@ export default class SectionActuality extends ManageDom {
           this.dom_element.arrowLeft.style.cursor = "default";
         } else if (nb_clicRight < this.data.nb_articles - 2) {
           this.dom_element.arrowRight.style.opacity = "1";
+          this.dom_element.arrowRight.style.cursor = "pointer";
         }
       }
     });
