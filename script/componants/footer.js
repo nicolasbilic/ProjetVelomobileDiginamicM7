@@ -68,7 +68,7 @@ export default class Footer extends ManageDom {
     ]);
 
     const followUs = this.createMarkup("p", "Nous suivre", salesDiv, [
-      {style: "font-size: 18px; font-weight: bold; color: white; list-style: none; margin: 0; margin-top: 20px;"}, {class: "title"}
+      {style: "font-size: 18px; font-weight: bold; color: white; list-style: none; margin: 0; margin-top: 20px;"}, {class: "title follow-us"}
     ]);
 
     const socialDiv = this.createMarkup("div", "", salesAndSocialDiv, [
@@ -79,7 +79,7 @@ export default class Footer extends ManageDom {
       {href : ""}
     ]);
     const linkedinImg = this.createMarkup("img", "", linkedinLink, [
-      { src: "../../assets/imgs/linkedin.png" },{ width: "40"}, {height: "auto"},
+      { src: "../../assets/imgs/linkedin.png" },{ width: "40"}, {height: "auto"}, , {class: "img"}
     ]);
 
     const fbLink = this.createMarkup("a", "", socialDiv, [
@@ -87,7 +87,7 @@ export default class Footer extends ManageDom {
     ]);
 
     const fbImg = this.createMarkup("img", "", fbLink, [
-      { src: "../../assets/imgs/fb.png" },{ width: "40"}, {height: "auto"},
+      { src: "../../assets/imgs/fb.png" },{ width: "40"}, {height: "auto"}, {class: "img"}
     ]);
 
     const instagramLink = this.createMarkup("a", "", socialDiv, [
@@ -95,7 +95,7 @@ export default class Footer extends ManageDom {
     ]);
 
     const instagramImg = this.createMarkup("img", "", instagramLink, [
-      { src: "../../assets/imgs/instagram.png" },{ width: "40"}, {height: "auto"},
+      { src: "../../assets/imgs/instagram.png" },{ width: "40"}, {height: "auto"},, {class: "img"}
     ]);
 
     const contactDiv = this.createMarkup("div", "", footer, [
@@ -113,15 +113,15 @@ export default class Footer extends ManageDom {
     ]);
 
     const firstName = this.createMarkup("input", "", nameDiv, [
-      {type : "text"},{id : "fname"},{name : "fname"},{placeholder : "Votre prénom"}, {required: "required"},{style: "font-weight: bold;border-radius: 5px; margin-right: 10px; width: 50%;"}, {class: "firstName"}
+      {type : "text"},{id : "fname"},{name : "fname"},{placeholder : "Votre prénom"}, {required: "required"},{style: "font-weight: bold;border-radius: 5px; margin-right: 10px; width: 50%;"}, {class: "input-footer"},
     ]);
 
     const lastName = this.createMarkup("input", "", nameDiv, [
-      {type : "text"},{id : "lname"},{name : "lname"},{placeholder : "Votre nom"}, {required: "required"},{style: "border-radius: 5px; font-weight: bold; width: 50%;"}
+      {type : "text"},{id : "lname"},{name : "lname"},{placeholder : "Votre nom"}, {required: "required"},{style: "border-radius: 5px; font-weight: bold; width: 50%;"}, {class: "input-footer lastName"}, 
     ]);
 
     const select = this.createMarkup("select", "Selectionnez", contactForm, [
-      {name : "contactType"},{id : "contactType"},{style: "font-weight: bold;border-radius: 5px; margin-bottom: 10px; color: grey"}
+      {name : "contactType"},{id : "contactType"},{style: "font-weight: bold;border-radius: 5px; margin-bottom: 10px; color: grey"}, {class: "input-footer"}
     ]);
 
     const selectInstruction = this.createMarkup("option", "Selectionnez", select, [
@@ -141,12 +141,12 @@ export default class Footer extends ManageDom {
     ]);
 
     const email = this.createMarkup("input", "", contactForm, [
-      {type : "mail"},{id : "email"},{name : "email"},{placeholder : "Votre mail"},{required: "required"},{style: "font-weight: bold;border-radius: 5px; margin-bottom: 10px;"}
+      {type : "mail"},{id : "email"},{name : "email"},{placeholder : "Votre mail"},{required: "required"},{style: "font-weight: bold;border-radius: 5px; margin-bottom: 10px;"}, {class: "input-footer"}
     ]);
 
     const send = this.createMarkup("input", "Envoyer", contactForm, [
       {type : "submit"},
-      {style: "cursor: pointer; font-weight: bold; border: none; border-radius: 5px; height: 25px; font-size: 12px; color: white; background-color: #cc0000; text-align: center; items-align: center;"},
+      {style: "cursor: pointer; font-weight: bold; border: none; border-radius: 5px; height: 25px; font-size: 12px; color: white; background-color: #cc0000; text-align: center; items-align: center;"}, {class: "input-footer"}
     ]);
 
     document.body.appendChild(footer);

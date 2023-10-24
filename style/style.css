@@ -68,55 +68,88 @@ h6 {
 }
 
 @media (max-width: 1180px) {
+    body {
+        margin: 0;
+        height: auto;
+        font-family: 'Work Sans', sans-serif;
+    }
+    
+    h1 {
+        font-size: 14px;
+    }
+    h2 {
+        font-size: 12px;
+    }
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Epilogue', sans-serif;
+    }
+    p {
+        font-size: 10px;
+    }
     .title {
         font-size: 14px !important;
     }
 
     .footer {
-        height: 180px !important;
+        height: 160px !important;
         width: 100%;
         align-items: flex-start !important;
+    }
+    .logo {
+        display: none !important;
+    }
 
-        .logo {
-            display: none !important;
-        }
+    .footer-pages {
+        display: none !important;
+    }
 
-        .footer-pages {
-            display: none !important;
-        }
+    .salesAndSocialDiv {
+        box-sizing: border-box;
+        padding-left: 10px !important;
+        width: 50%;
+    }
+    .salePointsTitle {
+        margin-bottom: 5px !important;
+    }
 
-        .salesAndSocialDiv {
-            box-sizing: border-box;
-            padding-left: 10px !important;
-            width: 50%;
+    .contactDiv {
+        width: 50%;
+        padding: 0 10px;
+    }
 
-            .salePointsTitle {
-                margin-bottom: 5px !important;
-            }
-        }
+    .contactForm {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 10px;
+        width: 50%;
+    }
 
-        .contactDiv {
-            width: 50%;
-            padding: 0 10px;
-        }
+    .nameDiv {
+        margin: 10px 0 0 0 !important;
+        margin-bottom: 0px !important;
+    }
 
-        .contactForm {
-            width: 100% ;
-            box-sizing: border-box;
-            padding: 0 10px;
-            width: 50%;
-        }
+    .input-footer {
+        font-size: 12px;
+        margin-bottom: 5px !important;
+    }
 
-        .nameDiv {
-            margin-top: 10px !important;
+    .firstName {
+        margin-right: 5px !important;
+    }
+    .img {
+        width: 30px;
+    }
+    .follow-us {
+        margin-top: 10px !important;
+    }
+}
 
-            .firstName {
-                margin-right: 5px !important;
-                font-size: 10px;
-            }
-            input {
-                font-size:80px;
-            }
-        }
+@media (min-width: 600px) and (max-width: 1180px) {
+    .logo {
+        display: none !important;
     }
 }
