@@ -1,0 +1,13 @@
+@media screen and (max-width: 1180px) {
+    .container_cards_actuality{
+        display: flex !important;
+        flex-direction: column !important
+    }
+    .container_arrows{
+        display: none !important;
+
+    }
+    .actuality_card{ 
+        background-color: red !important
+    }
+}

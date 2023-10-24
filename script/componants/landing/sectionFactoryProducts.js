@@ -14,13 +14,14 @@ export default class Landing extends ManageDom {
     const section = this.createMarkup("section", "", main, [
       {
         style:
-          "width: 90%; max-height: 925px; margin-bottom: 60px; overflow: hidden; position: relative;",
+          "width: 90%; max-height: 925px; margin-bottom: 60px; overflow: hidden; position: relative; display:flex",
       },
     ]);
     //Create the banner picture
     const bannerPicture = this.createMarkup("img", "", section, [
       {
-        style: "width: 100%;  margin: 0; max-height: 925px; object-fit: cover;",
+        style:
+          "width: 100%; height:100%  margin: 0; max-height: 925px; object-fit: cover;",
         src: "./../../assets/imgs/orange_velomobile_bg.png",
         alt: "Velomobile orange",
       },
@@ -41,29 +42,44 @@ export default class Landing extends ManageDom {
       },
     ]);
     //Create the factory's button
-    const buttonFactory = this.createMarkup(
-      "div",
+    const buttonFactory = this.createMarkup("div", "", bannerButtonArea, [
+      {
+        style:
+          "width: 50%; height: 100%; background-color: none; bottom: 0; margin: 0; border: 2px solid #CC0000; color: white; font-size: 22px; font-weight: bold;",
+      },
+    ]);
+    const h2Factory = this.createMarkup(
+      "h2",
       "Découvrez notre usine",
-      bannerButtonArea,
+      buttonFactory,
       [
         {
           style:
-            "width: 50%; height: 80px; background-color: none; bottom: 0; margin: 0; border: 2px solid #CC0000; color: white; display: flex; justify-content: center; align-items: center; font-size: 22px; font-weight: bold;",
+            "width: 100%; height:100%; display: flex; justify-content: center; align-items: center; margin: 0; position: relative",
         },
       ]
     );
+
     //Create the products's button
-    const buttonProducts = this.createMarkup(
-      "div",
+    const buttonProducts = this.createMarkup("div", "", bannerButtonArea, [
+      {
+        style:
+          "width: 50%; height: 100%; background-color: #CC0000; bottom: 0; margin: 0; border: 2px solid #CC0000; color: white; font-size: 22px; font-weight: bold;",
+      },
+    ]);
+    //Create the h1  button
+    const h2Products = this.createMarkup(
+      "h2",
       "Découvrez nos produits",
-      bannerButtonArea,
+      buttonProducts,
       [
         {
           style:
-            "width: 50%; height: 80px; background-color: #CC0000; bottom: 0; margin: 0; border: 2px solid #CC0000; color: white; display: flex; justify-content: center; align-items: center; font-size: 22px; font-weight: bold;",
+            "width: 100%; height:100%; display: flex; justify-content: center; align-items: center; margin: 0; position: relative",
         },
       ]
     );
+
     return { bannerPicture, bannerPictureHide, buttonFactory, buttonProducts };
   }
   //Method that catch event

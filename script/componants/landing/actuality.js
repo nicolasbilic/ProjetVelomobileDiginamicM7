@@ -17,6 +17,9 @@ export default class Actuality extends ManageDom {
         style:
           "width: 80%;  min-width: 200px; border: 2px solid #007DCC; display:flex; flex-direction: column; align-items: center; position: absolute; ",
       },
+      {
+        class: "actuality_card",
+      },
     ]);
     //Create the card picture
     const cardPicture = this.createMarkup("img", "", card, [

@@ -26,12 +26,18 @@ export default class SectionActuality extends ManageDom {
       {
         style: `width:auto; display: grid; grid-template-columns: repeat(${this.data.nb_articles}, 35.6%);`,
       },
+      {
+        class: "container_cards_actuality",
+      },
     ]);
     //Create the arrows container
     const arrowContainer = this.createMarkup("div", "", container, [
       {
         style:
           "width:100%; height:auto; top: 50%; position: absolute; z-index: 2; display: flex; justify-content: space-between; align-items: center;",
+      },
+      {
+        class: "container_arrows",
       },
     ]);
     //Create arrow left
