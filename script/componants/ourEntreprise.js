@@ -68,7 +68,7 @@ export default class OurEntreprise extends ManageDom {
     const blueBorderBottom = this.createMarkup("div", "", main, [
       {
         style:
-          "width: 100%; height: 10px; background-color: #007DCC; margin-bottom: 40px;",
+          "width: 100%; height: 10px; background-color: #007DCC; margin-bottom: 80px;",
       },
     ]);
   }
@@ -78,13 +78,14 @@ export default class OurEntreprise extends ManageDom {
     const sectionFactoryProducts = this.createMarkup("section", "", main, [
       {
         style:
-          "width: 60%; margin-bottom: 40px; display: flex; flex-direction: column; align-items: center",
+          "width: 60%; margin-bottom: 40px; margin-top: 40px;  display: flex; flex-direction: column; align-items: center; position: relative",
       },
     ]);
     //Create the first picture
     const pictureTop = this.createMarkup("img", "", sectionFactoryProducts, [
       {
-        style: " width: 35%; height:auto;margin: 0; border-radius: 0 0 50% 50%",
+        style:
+          " width: 35%; height:auto; margin: 0; top: 0; border-radius: 0 0 50% 50%",
         src: `./../../assets/imgs/entreprise/factory.png`,
         alt: "Banner",
       },
@@ -97,7 +98,7 @@ export default class OurEntreprise extends ManageDom {
       [
         {
           style:
-            "width: 100%; display: flex; justify-content: space-between; margin-top: -150px; position: relative;",
+            "width: 100%; display: flex; justify-content: space-between;  position: relative;",
         },
       ]
     );
@@ -157,17 +158,12 @@ export default class OurEntreprise extends ManageDom {
       },
     ]);
     //Create h2 button
-    const h2Factory = this.createMarkup(
-      "h2",
-      "Découvrez notre usine",
-      buttonFactory,
-      [
-        {
-          style:
-            "width: 100%; height:100%; display: flex; justify-content: center; align-items: center; margin: 0; position: relative",
-        },
-      ]
-    );
+    const h2Factory = this.createMarkup("h2", "Notre usine", buttonFactory, [
+      {
+        style:
+          "width: 100%; height:100%; display: flex; justify-content: center; align-items: center; margin: 0; position: relative",
+      },
+    ]);
     //Create the second buttonn
     const buttonProducts = this.createMarkup("div", "", buttonContainer, [
       {
@@ -176,17 +172,12 @@ export default class OurEntreprise extends ManageDom {
       },
     ]);
     //Create first button
-    const h2Products = this.createMarkup(
-      "h2",
-      "Découvrez nos produits",
-      buttonProducts,
-      [
-        {
-          style:
-            "width: 100%; height:100%; display: flex; justify-content: center; align-items: center; margin: 0; position: relative",
-        },
-      ]
-    );
+    const h2Products = this.createMarkup("h2", "Nos produits", buttonProducts, [
+      {
+        style:
+          "width: 100%; height:100%; display: flex; justify-content: center; align-items: center; margin: 0; position: relative",
+      },
+    ]);
     //Return buttons + pictures
     return {
       pictures: [pictureRight, pictureRightHide, pictureLeft, pictureLeftHide],

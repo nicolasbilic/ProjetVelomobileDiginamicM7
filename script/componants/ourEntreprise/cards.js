@@ -14,7 +14,7 @@ export default class Cards extends ManageDom {
     const cardBody = this.createMarkup("div", "", this.sectionCard, [
       {
         style:
-          "width: 60%; height: auto; background-color: #EFEFEF; margin-bottom: 40px; display: flex; position: relative; ",
+          "width: 80%; height: auto; background-color: #EFEFEF; margin-bottom: 80px; display: flex; position: relative; ",
       },
     ]);
     //Create the picture
@@ -24,11 +24,17 @@ export default class Cards extends ManageDom {
         src: `./../../assets/imgs/entreprise/${this.datas.picture}`,
         alt: "Banner",
       },
+      {
+        class: "img_card",
+      },
     ]);
     //Create the span for the title
     const cardSpan = this.createMarkup("span", "", cardBody, [
       {
         style: `position: absolute; top: 0; right: 0; width: 20%; height: 12%; background-color: ${this.datas.color};`, // Ajout de flex-shrink: 0
+      },
+      {
+        class: "span_card",
       },
     ]);
     //Create the title
@@ -44,15 +50,23 @@ export default class Cards extends ManageDom {
         style:
           "height: auto%; width: 47%; display: flex; flex-direction: column; justify-content: flex-end; margin-left: 20px; overflow: hidden; ",
       },
+      {
+        class: "container_text_card",
+      },
     ]);
     //Create the text for each P in json
-    this.datas.texts.forEach((text) => {
+    this.datas.texts.forEach((text, index = 0) => {
       const pCard = this.createMarkup("p", text, textBody, [
         {
           style:
-            "max-height: 255px; margin-top: 80px; text-overflow: ellipsis;  overflow: hidden;",
+            "max-height: 255px; margin-top: 10px; text-overflow: ellipsis;  overflow: hidden;",
         },
       ]);
+      //put a margin top on first p
+      if (index === 0) {
+        pCard.style.marginTop = "80px";
+      }
+      index++;
     });
     //If a card had the tag reverse
     if (this.orientation === "reverse") {
