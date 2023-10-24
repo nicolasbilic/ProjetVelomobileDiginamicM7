@@ -113,7 +113,7 @@ export default class Footer extends ManageDom {
     ]);
 
     const firstName = this.createMarkup("input", "", nameDiv, [
-      {type : "text"},{id : "fname"},{name : "fname"},{placeholder : "Votre prénom"}, {required: "required"},{style: "font-weight: bold;border-radius: 5px; margin-right: 10px; width: 50%;"}, {class: "input-footer"},
+      {type : "text"},{id : "fname"},{name : "fname"},{placeholder : "Votre prénom"}, {required: "required"},{style: "font-weight: bold;border-radius: 5px; margin-right: 10px; width: 50%;"}, {class: "input-footer firstName"},
     ]);
 
     const lastName = this.createMarkup("input", "", nameDiv, [

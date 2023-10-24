@@ -95,7 +95,6 @@ h6 {
 
     .footer {
         height: 160px !important;
-        width: 100%;
         align-items: flex-start !important;
     }
     .logo {
@@ -143,13 +142,67 @@ h6 {
     .img {
         width: 30px;
     }
+    hr {
+        width : 90% !important;
+    }
     .follow-us {
         margin-top: 10px !important;
+    }
+    .gif {
+        width: 50px;
+    }
+    .nav {
+        font-size: 12px !important;
+        justify-content: space-around !important;
+        width: 90% !important;
+        margin-bottom: 30px !important; 
+    }
+    .headLogo {
+        width: 100px;
+    }
+    .flag-color{
+        height: 5px !important;
+    } 
+
+    .contactButton {
+        width: 130px !important;
+        height: 20px !important;
+        font-size: 12px !important;
+        line-height: 20px !important;
+    }
+    .border {
+        height: 10px !important; 
+    }
+    header {
+        height: 240px !important;
+    }
+    .filter {
+        height: 240px !important;
+    }
+    .head-title {
+        font-size: 18px !important;
+    }
+    .accueil {
+        margin-right: 10px;
     }
 }
 
 @media (min-width: 600px) and (max-width: 1180px) {
+    
     .logo {
-        display: none !important;
+        display: flex !important;
+        width: 20%;
+    }
+    .salesAndSocialDiv {
+        width: 33%;
+    }
+    .contactForm {
+        width: 33%;
+    }
+    header {
+        height: 230px !important;
+    }
+    .filter {
+        height: 230px !important;
     }
 }
