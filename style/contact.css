@@ -32,12 +32,6 @@ main {
     height: auto;
 }
 
-.question {
-    font-size: 25px;
-    margin-top: 15px;
-    margin-bottom: 0px;
-}
-
 .content-form {
     padding: 0 0 0 40px;
     width: 50%;
@@ -148,7 +142,6 @@ input[type="submit"] {
     border-radius: 8px;
     border: none;
     background-color: #ecf5f6;
-    font-weight: 600;
     color: #808080;
     padding : 5px;
 }
@@ -164,10 +157,6 @@ input[type="submit"] {
 @media screen and (max-width: 1180px){
     p {
         font-size: 10px;
-    }
-
-    p.question {
-        font-size: 16px;
     }
 
     .input {
@@ -329,9 +318,6 @@ input[type="submit"] {
     .content-form-mailNumber {
         display: flex;
         flex-direction: column;
-    }
-    p.question {
-        font-size: 12px;
     }
     .socials-thumb {
         display: none;

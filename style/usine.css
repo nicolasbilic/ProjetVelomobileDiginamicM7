@@ -17,7 +17,7 @@ p {
     padding-left: 5px;
 }
 
-/**************** 1er bloc ****************/
+/**************** 1ère section ****************/
 
 .visit {
     display: flex;
@@ -61,7 +61,7 @@ p {
 }
 
 
-/*************** 2ème bloc *****************/
+/*************** 2ème section *****************/
 
 
 
@@ -109,7 +109,7 @@ p {
 }
 
 
-/*************** 3ème bloc *****************/
+/*************** 3ème section *****************/
 
 .ticket {
     display: flex;
@@ -144,12 +144,6 @@ p {
     left: 8px;
     top: 6px;
     position: relative;
-}
-
-.title {
-    font-size: 20px;
-    margin-top: 15px;
-    margin-bottom: 0px;
 }
 
 .content-form-nameFields {
@@ -197,6 +191,8 @@ button {
 input[type="submit"] {
     cursor: pointer;
 }
+
+/*************** Responsive tablette et tel *****************/
 
 @media (max-width: 1180px) {
 
@@ -287,13 +283,6 @@ input[type="submit"] {
         left: 0px;
         top: 6px;
         position: relative;
-    }
-    
-    .title {
-        font-size: 20px;
-        margin-top: 15px;
-        margin-bottom: 0px;
-        width: 90%;
     }
     
     .content-form-nameFields {
