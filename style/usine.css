@@ -13,10 +13,6 @@ p {
     font-size: 17px;
 }
 
-.text {
-    padding-left: 5px;
-}
-
 /**************** 1ère section ****************/
 
 .visit {
@@ -114,7 +110,7 @@ p {
 .ticket {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 70%;
     margin-top: 50px;
     padding-bottom: 50px;
 }
@@ -125,7 +121,7 @@ p {
 }
 
 #ticket-form {
-    width: 60%;
+    width: 35%;
     padding: 0px 0 0 70px;
     display: flex;
     flex-direction: column;
@@ -166,7 +162,7 @@ p {
 
 .input {
     height: 45px;
-    width: 250px;
+    width: 240px;
     border-radius: 8px;
     border: none;
     background-color: #ecf5f6;
