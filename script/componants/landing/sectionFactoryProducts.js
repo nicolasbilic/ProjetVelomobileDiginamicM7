@@ -40,6 +40,9 @@ export default class Landing extends ManageDom {
         style:
           "width: 40%; height: 70px; bottom: 0; margin: 0; position: absolute; display: flex;",
       },
+      {
+        class: "container_banner_button",
+      },
     ]);
     //Create the factory's button
     const buttonFactory = this.createMarkup("div", "", bannerButtonArea, [

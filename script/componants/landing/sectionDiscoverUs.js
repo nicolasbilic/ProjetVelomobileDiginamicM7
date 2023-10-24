@@ -143,7 +143,6 @@ export default class SectionDiscoverUs extends ManageDom {
     const startInterval = () => {
       //Use a Timer method to switch picture
       interval = setInterval(() => {
-        console.log("d");
         //Déclar the current and next picture
         let currentPicture = this.images[i];
         let nextPicture = this.images[i + 1];
