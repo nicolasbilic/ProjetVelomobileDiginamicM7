@@ -1,107 +1,181 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../script/componants/leaflet/leaflet.css" />
+    <script src="./../script/componants/leaflet/leaflet.js"></script>
+    <script src="./../script/componants/mapLeaflet.js" defer></script>
     <link rel="stylesheet" href="./../style/style.css" />
-    <link rel="stylesheet" href="../style/contact.css">
+    <link rel="stylesheet" href="../style/contact.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap"
-    rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
     <script type="module" src="./../script/main.js"></script>
     <title>Contact</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!----------------------------------------------------------------- 
             texte introductif de la page de contact
     ------------------------------------------------------------------->
 
     <div class="description">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut eros auctor,
-            varius ex in, vulputate urna. 
-            Ut venenatis libero eu euismod volutpat. 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Pellentesque tempor non diam vitae placerat.
-            Sed imperdiet  finibus dolor, nec feugiat ante sagittis luctus.</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut
+        eros auctor, varius ex in, vulputate urna. Ut venenatis libero eu
+        euismod volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Pellentesque tempor non diam vitae placerat. Sed imperdiet finibus
+        dolor, nec feugiat ante sagittis luctus.
+      </p>
     </div>
     <main>
-
-        <div class="content">
-            <!----------------------------------------------------------------- 
+      <div class="content">
+        <!----------------------------------------------------------------- 
                 image des points de vente de l'entreprise
             ------------------------------------------------------------------->
-            <img src="../assets/imgs/map_selling_points.png" alt="Carte des points de vente" class="content-map">
-
-            <!----------------------------------------------------------------- 
-                formulaire de contact
-            ------------------------------------------------------------------->
-            <div class="content-form">
-                <form action="#" id="frmContact">
-                    <p class="question"><strong>Une question ? <br> contactez-nous en ligne</strong></p>
-                    <!-- champs prénom et nom -->
-                    <div class="content-form-nameFields">
-                        <div class="content-form-field">
-                            <label for="fName"></label>
-                            <input class="input" type="text" name="fName" id="fName" placeholder="Votre prénom" required>
-                        </div>
-                        <div class="content-form-field">
-                            <label for="lName"></label>
-                            <input class="input" type="text" name="lName" id="lName" placeholder="Votre nom" required>
-                        </div>
-                    </div>
-                    <!-- champs mail et téléphone -->
-                    <div class="content-form-mailNumber">
-                        <div class="content-form-field">
-                            <label for="mail"></label>
-                            <input class="input" type="mail" name="mail" id="mail" placeholder="Votre mail" required>
-                        </div>
-                        <div class="content-form-field">
-                            <label for="phone"></label>
-                            <input class="input" type="number" name="phone" id="phone" placeholder="Votre numéro" required>
-                        </div>
-                    </div>
-                    <!-- menu déroulant-->
-                    <div class="content-form-field content-form-field-dropdown">
-                        <select class="profile" name="profile" id="profile" required>
-                            <option value="" disabled selected>Profil</option>
-                            <option value="ambassadeur">Ambassadeur</option>
-                            <option value="investisseur">Investisseur</option>
-                            <option value="recrutement">Recrutement</option>
-                        </select>
-                    </div>
-                    <!-- le Sujet -->
-                    <div class="content-form-field">
-                        <label for="topic"></label>
-                        <input class="input" type="text" name="topic" id="topic" placeholder="Votre sujet" required>
-                    </div>
-                    <!-- message -->
-                    <div class="content-form-field">
-                        <label for="message"></label>
-                        <textarea name="message" id="message" cols="50" rows="10" placeholder="Votre message..."
-                            maxlength="500" required></textarea>
-                    </div>
-                    <button type="submit">Envoyer</button>
-                </form>
-            </div>
-        </div>
+        <div id="map"></div>
+        <!-- <img
+          src="../assets/imgs/map_selling_points.png"
+          alt="Carte des points de vente"
+          class="content-map"
+        /> -->
 
         <!----------------------------------------------------------------- 
+                formulaire de contact
+            ------------------------------------------------------------------->
+        <div class="content-form">
+          <form action="#" id="frmContact">
+            <p class="question">
+              <strong
+                >Une question ? <br />
+                contactez-nous en ligne</strong
+              >
+            </p>
+            <!-- champs prénom et nom -->
+            <div class="content-form-nameFields">
+              <div class="content-form-field">
+                <label for="fName"></label>
+                <input
+                  class="input"
+                  type="text"
+                  name="fName"
+                  id="fName"
+                  placeholder="Votre prénom"
+                  required
+                />
+              </div>
+              <div class="content-form-field">
+                <label for="lName"></label>
+                <input
+                  class="input"
+                  type="text"
+                  name="lName"
+                  id="lName"
+                  placeholder="Votre nom"
+                  required
+                />
+              </div>
+            </div>
+            <!-- champs mail et téléphone -->
+            <div class="content-form-mailNumber">
+              <div class="content-form-field">
+                <label for="mail"></label>
+                <input
+                  class="input"
+                  type="mail"
+                  name="mail"
+                  id="mail"
+                  placeholder="Votre mail"
+                  required
+                />
+              </div>
+              <div class="content-form-field">
+                <label for="phone"></label>
+                <input
+                  class="input"
+                  type="number"
+                  name="phone"
+                  id="phone"
+                  placeholder="Votre numéro"
+                  required
+                />
+              </div>
+            </div>
+            <!-- menu déroulant-->
+            <div class="content-form-field content-form-field-dropdown">
+              <select class="profile" name="profile" id="profile" required>
+                <option value="" disabled selected>Profil</option>
+                <option value="ambassadeur">Ambassadeur</option>
+                <option value="investisseur">Investisseur</option>
+                <option value="recrutement">Recrutement</option>
+              </select>
+            </div>
+            <!-- le Sujet -->
+            <div class="content-form-field">
+              <label for="topic"></label>
+              <input
+                class="input"
+                type="text"
+                name="topic"
+                id="topic"
+                placeholder="Votre sujet"
+                required
+              />
+            </div>
+            <!-- message -->
+            <div class="content-form-field">
+              <label for="message"></label>
+              <textarea
+                name="message"
+                id="message"
+                cols="50"
+                rows="10"
+                placeholder="Votre message..."
+                maxlength="500"
+                required
+              ></textarea>
+            </div>
+            <button type="submit">Envoyer</button>
+          </form>
+        </div>
+      </div>
+
+      <!----------------------------------------------------------------- 
             section réseaux sociaux
         ------------------------------------------------------------------->
-        <div class="socials">
-            <div class="socials-header">
-                <p class="question">Envoyez-nous un message directement sur les réseaux sociaux &nbsp;</p>
-                <img src="../assets/imgs/icon-pouce.png" alt="pouce bleu de facebook" class="socials-thumb">
-            </div>
-            <div class="socials-icons">
-                <img src="../assets/imgs/linkedin.png" alt="icone linkedin" class="img-icone">
-                <img src="../assets/imgs/icons8-facebook.png" alt="icone facebook" class="img-icone">
-                <img src="../assets/imgs/icon-insta.png" alt="icone instagram" class="img-icone">
-            </div>
+      <div class="socials">
+        <div class="socials-header">
+          <p class="question">
+            Envoyez-nous un message directement sur les réseaux sociaux &nbsp;
+          </p>
+          <img
+            src="../assets/imgs/icon-pouce.png"
+            alt="pouce bleu de facebook"
+            class="socials-thumb"
+          />
         </div>
+        <div class="socials-icons">
+          <img
+            src="../assets/imgs/linkedin.png"
+            alt="icone linkedin"
+            class="img-icone"
+          />
+          <img
+            src="../assets/imgs/icons8-facebook.png"
+            alt="icone facebook"
+            class="img-icone"
+          />
+          <img
+            src="../assets/imgs/icon-insta.png"
+            alt="icone instagram"
+            class="img-icone"
+          />
+        </div>
+      </div>
     </main>
-</body>
-
+  </body>
 </html>

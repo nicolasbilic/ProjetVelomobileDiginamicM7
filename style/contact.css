@@ -2,6 +2,11 @@ body {
     font-family: "Epilogue";
 }
 
+#map {
+    width: 50%;
+    height: auto;
+}
+
 main {
     width: 100%;
     display: flex;
