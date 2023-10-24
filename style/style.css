@@ -4,11 +4,6 @@ body {
     font-family: 'Work Sans', sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
 h6 {
     font-family: 'Epilogue', sans-serif;
 }
@@ -80,9 +75,6 @@ h6 {
     h2 {
         font-size: 12px;
     }
-    h3,
-    h4,
-    h5,
     h6 {
         font-family: 'Epilogue', sans-serif;
     }
