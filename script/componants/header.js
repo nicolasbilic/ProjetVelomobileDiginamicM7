@@ -10,7 +10,7 @@ export default class Header extends ManageDom {
     const header = this.createMarkup("header", "", document.body, [
       {
         style:
-          "margin-bottom: 50px; width:100%; height: 330px; display:flex; flex-direction: column; align-items: center;  background-image: url('./../../assets/imgs/background.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; margin-top: 0px;",
+          "margin-bottom: 50px; width:100%; height: 335px; display:flex; flex-direction: column; align-items: center;  background-image: url('./../../assets/imgs/background.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; margin-top: 0px;",
       },
     ]);
     document.body.insertBefore(header, document.body.firstChild);
@@ -18,7 +18,7 @@ export default class Header extends ManageDom {
     const filter = this.createMarkup("div", "", header, [
       {
         style:
-          " width:100%; height:330px; position: absolute; display:flex; flex-direction: column; align-items: center; margin-top: 0px; background-color: black; opacity:0.65; z-index: 0;",
+          " width:100%; height:335px; position: absolute; display:flex; flex-direction: column; align-items: center; margin-top: 0px; background-color: black; opacity:0.65; z-index: 0;",
       },
       {class: "filter"}
     ]);
