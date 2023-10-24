@@ -63,7 +63,7 @@ export default class PresentationSection extends ManageDom {
     const detailsContainer = this.createMarkup("div", "", containerProfil, [
       {
         style:
-          "width:100%; box-sizing: border-box;  height: auto; max-height: 450px; background-color: #EFEFEF; border-radius: 250px 0 0 250px; overflow: hidden; position: absolute",
+          "width:100%; box-sizing: border-box;  height: auto; max-height: 450px; background-color: #EFEFEF; border-radius: 250px 20px 20px 250px; overflow: hidden; position: absolute",
       },
     ]);
     //Create the profil name
@@ -114,7 +114,7 @@ export default class PresentationSection extends ManageDom {
       containerProfil.style.flexDirection = "row-reverse";
       detailsContainer.style.paddingLeft = "0%";
       detailsContainer.style.paddingRight = "25%";
-      detailsContainer.style.borderRadius = "0 250px 250px 0";
+      detailsContainer.style.borderRadius = "20px 250px 250px 20px";
     }
   }
 }
