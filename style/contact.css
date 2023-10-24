@@ -2,10 +2,7 @@ body {
     font-family: "Epilogue";
 }
 
-#map {
-    width: 50%;
-    height: auto;
-}
+
 
 main {
     width: 100%;
@@ -79,7 +76,7 @@ textarea::placeholder {
 
 .input {
     height: 45px;
-    width: 250px;
+    width: 100%;
     border-radius: 8px;
     border: none;
     background-color: #ecf5f6;
@@ -229,10 +226,69 @@ input[type="submit"] {
     }
 }
 
-@media screen and (max-width: 390px){
-    main .content img.content-map {
+@media screen and (max-width: 766px){
+    .description {
+        width: 100%;
+        padding: 0;
+    }
+    .description p {
+        width: 80%;
+    }
+    .content-map {
         display: none;
     }
+    .content-form {
+        width: 100%;
+        padding:0;
+        display: flex;
+        justify-content: center;
+    }
+    #frmContact{
+        width:100%;
+        padding-right: 0;
+        padding-Left: 0;
+    }
+    .content-form-field {
+        width:50%;
+        padding-right: 0;
+        padding-Left: 0;
+    }
+    .input {
+        width:100%;
+        padding-right: 0;
+        padding-Left: 0;
+    }
+    .input::placeholder {
+       padding-left: 10px;
+    }
+    .profile { 
+        width:100% !important;
+        padding-right: 0;
+        padding-Left: 10px;
+    }
+
+ 
+    #message {
+        width:100%;
+        padding-right: 0;
+        padding-Left: 0;
+    }
+    #fName {
+        width: 95%;
+    }
+    #mail {
+        width: 95%;
+    }
+
+    .content-form-field {
+        width:100%;
+    }
+}
+@media screen and (max-width: 390px){
+    main .content .content-map {
+        display: none;
+    }
+
     .description {
         font-size: 10px;
         width: 100%;

@@ -3,9 +3,11 @@ function Leafleat() {
   var map = L.map("map").setView([48.8566, 2.3522], 6);
   const mapClass = document.querySelector("#map").classList;
   let cities = [];
+  let includeBinary = false;
   mapClass.forEach((element) => {
     if (element.includes("mapContact")) {
       // Array of each city
+      includeBinary = true;
       cities = [
         { name: "Agde", lat: 43.3134787, lon: 3.4771629 },
         { name: "Salon-de-Provence", lat: 43.6405237, lon: 5.0980225 },
@@ -13,7 +15,9 @@ function Leafleat() {
         { name: "Cassis.", lat: 43.2140359, lon: 5.5396318 },
       ];
     } else {
-      cities = [{ name: "Mende", lat: 44.5180226, lon: 3.4991057 }];
+      if (includeBinary === false) {
+        cities = [{ name: "Mende", lat: 44.5180226, lon: 3.4991057 }];
+      }
     }
   });
 
