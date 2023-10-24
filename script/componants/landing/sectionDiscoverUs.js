@@ -6,8 +6,9 @@ export default class SectionDiscoverUs extends ManageDom {
     super();
     this.data = data;
     this.images = [];
-    this.dom_element = this.render();
+    this.render();
     this.animateLightbox();
+    this.currentPicture;
   }
   //Render method
   render() {
@@ -63,16 +64,19 @@ export default class SectionDiscoverUs extends ManageDom {
       const imgLightbox = this.createMarkup("img", "", containerLightBox, [
         {
           style:
-            "width: 100%; max-width: 455px; max-height: 455px; margin: 0; position: absolute; object-fit: contain; top:50%; transform: translateY(-50%);",
+            "width: 100%; max-width: 455px; max-height: 455px; margin: 0; position: absolute; object-fit: contain; top:50%; transform: translateY(-50%); cursor: pointer;",
           src: `./../../assets/imgs/${element}.png`,
-          alt: `${element}`,
+          alt: element,
+          id: element,
         },
       ]);
+      imgLightbox.style.zIndex = 1;
+      //Hide all picture except the first one
       imgLightbox.style.border = "4px solid #007DCC";
       if (i !== 0) {
         imgLightbox.style.opacity = 0;
+        imgLightbox.style.zIndex = 0;
       }
-      //Hide all picture except the first one
       this.images.push(imgLightbox);
       i++;
     });
@@ -131,8 +135,8 @@ export default class SectionDiscoverUs extends ManageDom {
     const startInterval = () => {
       //Use a Timer method to switch picture
       interval = setInterval(() => {
-        console.log("d");
         //Déclar the current and next picture
+        this.currentPicture = i;
         let currentPicture = this.images[i];
         let nextPicture = this.images[i + 1];
         //If image isn't the last one
@@ -140,8 +144,10 @@ export default class SectionDiscoverUs extends ManageDom {
           //swap picture with an imation
           currentPicture.style.transition = "opacity 1s";
           currentPicture.style.opacity = 0; //Hide current Picture
+          currentPicture.style.zIndex = 0;
           nextPicture.style.transition = "opacity 1s";
           nextPicture.style.opacity = 1; //Show next Picture
+          nextPicture.style.zIndex = 1;
           setTimeout(() => {}, speed);
           i++;
         } else {
@@ -149,8 +155,10 @@ export default class SectionDiscoverUs extends ManageDom {
           nextPicture = this.images[0];
           currentPicture.style.transition = "opacity 1s";
           currentPicture.style.opacity = 0;
+          currentPicture.style.zIndex = 0;
           nextPicture.style.transition = "opacity 1s";
           nextPicture.style.opacity = 1;
+          nextPicture.style.zIndex = 1;
           setTimeout(() => {}, speed);
           i = 0;
         }
@@ -161,7 +169,7 @@ export default class SectionDiscoverUs extends ManageDom {
     //Loop each image to add the stop
     this.images.forEach((image, i) => {
       //Add an  event listener
-      image.addEventListener("click", () => {
+      image.addEventListener("click", (e) => {
         //if scroll true, stop interval, else start interval
         if (scroll === true) {
           clearInterval(interval);
@@ -169,7 +177,36 @@ export default class SectionDiscoverUs extends ManageDom {
           startInterval();
         }
         scroll = !scroll;
+        this.createModal(e);
       });
+    });
+  }
+  createModal(e) {
+    const main = document.querySelector("body");
+    const modal = this.createMarkup("div", "", main, [
+      {
+        style:
+          "width: 90%; height:90vh; auto;background-color:black; position: fixed; top:50%; left:50%; transform: translate(-50%, -50%); z-index: 3;",
+      },
+    ]);
+    console.log(e.target.id);
+    //create the lightbox's pictures from the array
+    this.data.lightbox.forEach((element, i = 0) => {
+      const imgLightbox = this.createMarkup("img", "", modal, [
+        {
+          style:
+            "width:100%; height:100%; object-fit: cover; position: absolute",
+          src: `./../../assets/imgs/${element}.png`,
+          alt: `${element}`,
+        },
+      ]);
+      imgLightbox.style.border = "4px solid #007DCC";
+
+      if (i === 0) {
+        imgLightbox.style.opacity = 0;
+      }
+      //Hide all picture except the first one
+      i++;
     });
   }
 }
