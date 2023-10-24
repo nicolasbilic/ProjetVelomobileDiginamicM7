@@ -5,6 +5,12 @@ body {
     font-family: "Epilogue";
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .product {
     display: flex;
     margin-bottom: 50px;
@@ -27,11 +33,6 @@ body {
             font-size: 20px;
         }
     }
-
-    .productimg-container {
-        max-width: 50%;
-    }
-
 }
 
 
@@ -50,15 +51,27 @@ button {
     margin-bottom: 50px;
 }
 
+button:hover {
+    transform: scale(1.1);
+}
+
 .img-container {
     width: 100%;
     height: 300px;
     overflow: hidden;
+    object-fit: container;
 
     img {
-        width: 100%;
+        max-width: 100%;
         height: auto;
+        object-fit: cover;
     }
+}
+
+.productimg {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
 }
 
 .advantages {
@@ -88,7 +101,7 @@ button {
                 }
             }
         }
-        
+
         span {
             display: block;
             margin-bottom: 10px;
@@ -123,11 +136,6 @@ button {
                 margin-bottom: 10px;
                 display: block;
             }
-        }
-
-        .productimg-container {
-            max-width: 100%;
-            margin-top: 5px;
         }
     }
 
@@ -169,7 +177,7 @@ button {
     }
 
     button {
-        width: 200px;
+        width: 250px;
         height: 30px;
         font-size: 14px;
         font-weight: bold;
@@ -181,6 +189,12 @@ button {
         display: block;
         margin: auto;
         margin-bottom: 30px;
+    }
+
+    .productimg {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 
 }
