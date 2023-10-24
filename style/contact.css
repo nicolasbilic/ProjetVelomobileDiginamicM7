@@ -224,12 +224,50 @@ input[type="submit"] {
     }
 }
 
-@media screen and (max-width: 844){
-    .content-map {
+@media screen and (max-width: 390px){
+    main .content img.content-map {
         display: none;
     }
-    p {
+    .description {
         font-size: 10px;
         width: 100%;
+        /* background-color: lightblue; */
+        display: flex;
+        justify-content: center;
+    }
+    .content {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 0px 0 20px;
+        /* background-color: rgb(237, 123, 245); */
+    }
+    .content-form {
+        padding: 0 0 0 40px;
+        width: 100%;
+        /* background-color: rgba(2, 125, 204, 0.9); */
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+    }
+    .content-form-nameFields {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .content-form-mailNumber {
+        display: flex;
+        flex-direction: column;
+    }
+    p.question {
+        font-size: 12px;
+    }
+    .socials-thumb {
+        display: none;
+    }
+    .socials-icons {
+        display: flex;
+        justify-content: center;
+        padding: 0px 0 15px 0;
     }
 }
