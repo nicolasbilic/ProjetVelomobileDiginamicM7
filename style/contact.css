@@ -28,7 +28,6 @@ main {
     /* max-height: 600px; */
     width: 50%;
     height: auto;
-   /*  background-color: pink; */
 }
 
 .question {
@@ -127,14 +126,14 @@ input[type="submit"] {
 .socials-icons {
     display: flex;
     justify-content: center;
-    padding: 10px 0;
+    padding: 10px 0 50px 0;
 }
 
 .socials-icons img {
     padding: 0 5px;
 }
 
-.img-icone-linkedin {
+.img-icone {
     height: 50px;
     width: 50px;
 }
@@ -148,4 +147,89 @@ input[type="submit"] {
     font-weight: 600;
     color: #808080;
     padding : 5px;
+}
+
+@media screen and (max-width: 1180px){
+    p {
+        font-size: 10px;
+    }
+
+    p.question {
+        font-size: 16px;
+    }
+
+    .input {
+        font-size: 10px;
+    }
+
+    #profile {
+        font-size: 10px;
+        height: 30px;
+        width: 157px;
+    }
+
+    textarea {
+        width: 250px;
+        height: 100px;
+    }
+
+    textarea::placeholder {
+        font-size: 10px;
+    }
+
+    button {
+        font-size: 10px;
+        height: 30px;
+        width: 200px;
+    }
+    .input {
+        height: 30px;
+        width: 150px;
+    }
+    .content-form-field {
+        padding: 10px 10px 0 0;
+    }
+    .content-map {
+        width: 50%;
+        height: auto;
+    }
+    .content {
+        display: flex;
+        justify-content: center;
+        width: 70%;
+        padding: 20px 0;
+        /* background-color: red; */
+    }
+    .content-form {
+        padding: 0 0 0 40px;
+        width: 42%;
+        /* background-color: green; */
+    }
+    .description {
+        width: 50%;
+        /* background-color: lightblue; */
+        display: flex;
+        justify-content: center;
+        padding-left: 80px;
+    }
+    .img-icone {
+        height: 40px;
+        width: 40px;
+    }
+    .socials-thumb {
+        width: auto;
+        height: 25px;
+        bottom: 2px;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 844){
+    .content-map {
+        display: none;
+    }
+    p {
+        font-size: 10px;
+        width: 100%;
+    }
 }
