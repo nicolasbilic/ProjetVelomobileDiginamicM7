@@ -44,6 +44,8 @@ main {
    /*  background-color: green; */
 }
 
+
+
 .content-form-nameFields {
     display: flex;
 }
@@ -142,13 +144,17 @@ input[type="submit"] {
 
 .profile {
     height: 45px;
-    width: 254px;
+    width: 405px;
     border-radius: 8px;
     border: none;
     background-color: #ecf5f6;
     font-weight: 600;
     color: #808080;
     padding : 5px;
+}
+
+#topic {
+    width: 405px;
 }
 
 @media screen and (max-width: 1180px){
