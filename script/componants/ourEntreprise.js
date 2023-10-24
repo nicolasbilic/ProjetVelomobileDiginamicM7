@@ -150,26 +150,40 @@ export default class OurEntreprise extends ManageDom {
       ]
     );
     //Create first button
-    const buttonFactory = this.createMarkup(
-      "div",
+    const buttonFactory = this.createMarkup("div", "", buttonContainer, [
+      {
+        style:
+          "width: 50%;  height: 100%; cursor: pointer; display: flex; justify-content: center; align-items: center; border: 2px solid #007DCC; background-color:#007DCC; color: white; font-weight: bold; font-size: 20px;",
+      },
+    ]);
+    //Create h2 button
+    const h2Factory = this.createMarkup(
+      "h2",
       "Découvrez notre usine",
-      buttonContainer,
+      buttonFactory,
       [
         {
           style:
-            "width: 50%;  height: 100%; cursor: pointer; display: flex; justify-content: center; align-items: center; border: 2px solid #007DCC; background-color:#007DCC; color: white; font-weight: bold; font-size: 20px;",
+            "width: 100%; height:100%; display: flex; justify-content: center; align-items: center; margin: 0; position: relative",
         },
       ]
     );
     //Create the second buttonn
-    const buttonProducts = this.createMarkup(
-      "div",
+    const buttonProducts = this.createMarkup("div", "", buttonContainer, [
+      {
+        style:
+          "width: 50%;  height: 100%; cursor: pointer; display: flex; justify-content: center; align-items: center; border: 2px solid #007DCC; font-weight: bold; font-size: 20px;",
+      },
+    ]);
+    //Create first button
+    const h2Products = this.createMarkup(
+      "h2",
       "Découvrez nos produits",
-      buttonContainer,
+      buttonProducts,
       [
         {
           style:
-            "width: 50%;  height: 100%; cursor: pointer; display: flex; justify-content: center; align-items: center; border: 2px solid #007DCC; font-weight: bold; font-size: 20px;",
+            "width: 100%; height:100%; display: flex; justify-content: center; align-items: center; margin: 0; position: relative",
         },
       ]
     );

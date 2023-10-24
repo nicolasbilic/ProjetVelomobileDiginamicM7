@@ -23,6 +23,9 @@ export default class SectionDiscoverUs extends ManageDom {
         style:
           "width: 100%; height:465px; display:flex; justify-content:space-between;",
       },
+      {
+        class: "container_lightbox_and_text",
+      },
     ]);
     //Call the lightbox methods
     this.createLightBox(lightBoxAndText);
