@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./../script/componants/leaflet/leaflet.css" />
+    <script src="./../script/componants/leaflet/leaflet.js"></script>
+    <script src="./../script/componants/mapLeaflet.js" defer></script>
   <link rel="stylesheet" href="./../style/style.css" />
   <link rel="stylesheet" href="../style/usine.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -81,7 +84,8 @@
        3ème section réservation ticket 
     ---------------------------------->
     <div class="ticket">
-      <img src="../assets/imgs/img_production_point.png" alt="localisation de l'usine, à Mende" class="mapSite" />
+      <div id="map" class="mapSite"></div>
+      <!-- <img src="../assets/imgs/img_production_point.png" alt="localisation de l'usine, à Mende" class="mapSite" /> -->
       <form action="#" id="ticket-form">
         <div class="ticket-form-book">
           <p class="title">
