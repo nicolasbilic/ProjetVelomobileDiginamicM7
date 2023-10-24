@@ -12,13 +12,14 @@ export default class Footer extends ManageDom {
         style:
           "width:100%; height: 250px; display:flex; flex-direction: row; align-items: center; background-color: #3D3D3D; justify-content: space-around; font-family: epilogue;",
       },
+      { class : "footer"}
     ]);
     const logo = this.createMarkup("img", "", footer, [
-      { src: "../../assets/imgs/logo_client.png" },{ width: "200"}, {height: "auto"},
+      { src: "../../assets/imgs/logo_client.png" },{ width: "200"}, {height: "auto"},{class: "logo"}
     ]);
 
     const pagesDiv = this.createMarkup("div", "", footer, [
-      {style: "display: flex; align-items: flex-start; flex-direction: column; justify-content: center;"}
+      {style: "display: flex; align-items: flex-start; flex-direction: column; justify-content: center;"},{class: "footer-pages"}
     ]); 
 
     const accueil = this.createMarkup("a", "Accueil", pagesDiv, [
@@ -42,15 +43,15 @@ export default class Footer extends ManageDom {
     ]);
 
     const salesAndSocialDiv = this.createMarkup("div", "", footer, [
-      {style: "display: flex; align-items: flex-start; flex-direction: column; justify-content: center; padding: 0;"}
+      {style: "display: flex; align-items: flex-start; flex-direction: column; justify-content: center; padding: 0;"}, {class: "salesAndSocialDiv"}
     ]); 
 
     const salesDiv = this.createMarkup("div", "", salesAndSocialDiv, [
-      {style: "display: flex; align-items: flex-start; flex-direction: column; justify-content: center;"}
+      {style: "display: flex; align-items: flex-start; flex-direction: column; justify-content: center;"}, 
     ]); 
 
     const salePointsTitle = this.createMarkup("ul", "Nos points de vente", salesDiv, [
-      {style: "font-size: 18px; font-weight: bold; color: white; text-decofation: none; list-style: none; padding: 0; margin: 0; margin-top: 20px; "},
+      {style: "font-size: 18px; font-weight: bold; color: white; text-decofation: none; list-style: none; padding: 0; margin: 0; margin-top: 20px; "}, {class: "title salePointsTitle"},
     ]);
 
     const agdeSalePoint = this.createMarkup("li", "Agde (34300)", salesDiv, [
@@ -67,7 +68,7 @@ export default class Footer extends ManageDom {
     ]);
 
     const followUs = this.createMarkup("p", "Nous suivre", salesDiv, [
-      {style: "font-size: 18px; font-weight: bold; color: white; list-style: none; margin: 0; margin-top: 20px;"}
+      {style: "font-size: 18px; font-weight: bold; color: white; list-style: none; margin: 0; margin-top: 20px;"}, {class: "title"}
     ]);
 
     const socialDiv = this.createMarkup("div", "", salesAndSocialDiv, [
@@ -98,25 +99,25 @@ export default class Footer extends ManageDom {
     ]);
 
     const contactDiv = this.createMarkup("div", "", footer, [
-      {style: "display: flex; flex-direction: column; align-items: flex-start; justify-content: center;"}
+      {style: "display: flex; flex-direction: column; align-items: flex-start; justify-content: center;"}, {class: "contactDiv"}
     ]); 
 
 
     const contactForm = this.createMarkup("form", "Nous contacter", contactDiv, [
-      {style: "display: flex; flex-direction: column; font-size: 18px; font-weight: bold; color: white; list-style: none; margin: 0; margin-top: 20px;"}
+      {style: "display: flex; flex-direction: column; font-size: 18px; font-weight: bold; color: white; list-style: none; margin: 0; margin-top: 20px;"},{class: "contactForm"},  {class: "title"}
 
     ]);
 
     const nameDiv = this.createMarkup("div", "", contactForm, [
-      {style: "display: flex; flex-direction: row; margin-bottom: 10px; margin-top: 20px;"}
+      {style: "display: flex; flex-direction: row; margin-bottom: 10px; margin-top: 20px;"}, {class :"nameDiv"}
     ]);
 
     const firstName = this.createMarkup("input", "", nameDiv, [
-      {type : "text"},{id : "fname"},{name : "fname"},{placeholder : "Votre prénom"}, {required: "required"},{style: "font-weight: bold;border-radius: 5px; margin-right: 10px;"}
+      {type : "text"},{id : "fname"},{name : "fname"},{placeholder : "Votre prénom"}, {required: "required"},{style: "font-weight: bold;border-radius: 5px; margin-right: 10px; width: 50%;"}, {class: "firstName"}
     ]);
 
     const lastName = this.createMarkup("input", "", nameDiv, [
-      {type : "text"},{id : "lname"},{name : "lname"},{placeholder : "Votre nom"}, {required: "required"},{style: "border-radius: 5px; font-weight: bold;"}
+      {type : "text"},{id : "lname"},{name : "lname"},{placeholder : "Votre nom"}, {required: "required"},{style: "border-radius: 5px; font-weight: bold; width: 50%;"}
     ]);
 
     const select = this.createMarkup("select", "Selectionnez", contactForm, [

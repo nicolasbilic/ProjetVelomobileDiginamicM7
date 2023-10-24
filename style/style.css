@@ -1,45 +1,122 @@
 body {
-    margin:0;
+    margin: 0;
     height: auto;
     font-family: 'Work Sans', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Epilogue', sans-serif;
 }
 
 @keyframes velomobile {
-    0% {transform: scaleX(1)}
-    29%{
-        left:85%;
+    0% {
         transform: scaleX(1)
     }
-    30%{transform: scaleX(-1)}
-    59%{
-        left:10%;
+
+    29% {
+        left: 85%;
+        transform: scaleX(1)
+    }
+
+    30% {
         transform: scaleX(-1)
     }
+
+    59% {
+        left: 10%;
+        transform: scaleX(-1)
+    }
+
     60% {
-        left:10%;
+        left: 10%;
         transform: scaleX(1)
     }
-    100%{}
+
+    100% {}
 }
 
 @keyframes velomobile {
-    0% {transform: scaleX(1)}
-    29%{
-        left:85%;
+    0% {
         transform: scaleX(1)
     }
-    30%{transform: scaleX(-1)}
-    59%{
-        left:10%;
+
+    29% {
+        left: 85%;
+        transform: scaleX(1)
+    }
+
+    30% {
         transform: scaleX(-1)
     }
+
+    59% {
+        left: 10%;
+        transform: scaleX(-1)
+    }
+
     60% {
-        left:10%;
+        left: 10%;
         transform: scaleX(1)
     }
-    100%{}
+
+    100% {}
+}
+
+@media (max-width: 1180px) {
+    .title {
+        font-size: 14px !important;
+    }
+
+    .footer {
+        height: 180px !important;
+        width: 100%;
+        align-items: flex-start !important;
+
+        .logo {
+            display: none !important;
+        }
+
+        .footer-pages {
+            display: none !important;
+        }
+
+        .salesAndSocialDiv {
+            box-sizing: border-box;
+            padding-left: 10px !important;
+            width: 50%;
+
+            .salePointsTitle {
+                margin-bottom: 5px !important;
+            }
+        }
+
+        .contactDiv {
+            width: 50%;
+            padding: 0 10px;
+        }
+
+        .contactForm {
+            width: 100% ;
+            box-sizing: border-box;
+            padding: 0 10px;
+            width: 50%;
+        }
+
+        .nameDiv {
+            margin-top: 10px !important;
+
+            .firstName {
+                margin-right: 5px !important;
+                font-size: 10px;
+            }
+            input {
+                font-size:80px;
+            }
+        }
+    }
 }
