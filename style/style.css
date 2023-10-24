@@ -15,6 +15,9 @@ h2 {
 h6 {
     font-family: 'Epilogue', sans-serif;
 }
+::placeholder {
+    font-family: 'Work Sans', sans-serif;
+}
 
 .h-link:hover {
     color : #007dcc !important;

@@ -157,6 +157,10 @@ input[type="submit"] {
     width: 405px;
 }
 
+#frmContact input, #frmContact select, #frmContact textarea {
+    border: 1px solid #007DCC;
+}
+
 @media screen and (max-width: 1180px){
     p {
         font-size: 10px;
