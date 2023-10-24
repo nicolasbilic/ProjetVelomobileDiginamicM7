@@ -16,6 +16,10 @@ h6 {
     font-family: 'Epilogue', sans-serif;
 }
 
+.h-link:hover {
+    color : #007dcc !important;
+}
+
 @keyframes velomobile {
     0% {
         transform: scaleX(1)
