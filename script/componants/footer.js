@@ -76,14 +76,14 @@ export default class Footer extends ManageDom {
     ]); 
 
     const linkedinLink = this.createMarkup("a", "", socialDiv, [
-      {href : ""}
+      {href : "https://fr.linkedin.com/"}
     ]);
     const linkedinImg = this.createMarkup("img", "", linkedinLink, [
       { src: "../../assets/imgs/linkedin.png" },{ width: "40"}, {height: "auto"}, , {class: "img"}
     ]);
 
     const fbLink = this.createMarkup("a", "", socialDiv, [
-      {href : ""}
+      {href : "https://www.facebook.com/?locale=fr_FR"}
     ]);
 
     const fbImg = this.createMarkup("img", "", fbLink, [
@@ -91,7 +91,7 @@ export default class Footer extends ManageDom {
     ]);
 
     const instagramLink = this.createMarkup("a", "", socialDiv, [
-      {href : ""}
+      {href : "https://www.instagram.com/"}
     ]);
 
     const instagramImg = this.createMarkup("img", "", instagramLink, [
