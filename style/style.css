@@ -95,7 +95,6 @@ h6 {
 
     .footer {
         height: 160px !important;
-        width: 100%;
         align-items: flex-start !important;
     }
     .logo {
@@ -143,13 +142,93 @@ h6 {
     .img {
         width: 30px;
     }
+    hr {
+        width : 90% !important;
+    }
     .follow-us {
         margin-top: 10px !important;
+    }
+    .gif {
+        width: 50px;
+    }
+    .nav {
+        font-size: 12px !important;
+        justify-content: space-around !important;
+        width: 90% !important;
+        margin-bottom: 30px !important; 
+    }
+    .headLogo {
+        width: 100px;
+    }
+    .flag-color{
+        height: 5px !important;
+    } 
+
+    .contactButton {
+        width: 130px !important;
+        height: 20px !important;
+        font-size: 12px !important;
+        line-height: 20px !important;
+    }
+    .border {
+        height: 10px !important; 
+    }
+    header {
+        height: 240px !important;
+    }
+    .filter {
+        height: 240px !important;
+    }
+    .head-title {
+        font-size: 18px !important;
+    }
+    .accueil {
+        margin-right: 15px;
     }
 }
 
 @media (min-width: 600px) and (max-width: 1180px) {
+    body {
+        margin: 0;
+        height: auto;
+        font-family: 'Work Sans', sans-serif;
+    }
+    
+    h1 {
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 14px;
+    }
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Epilogue', sans-serif;
+    }
+    p {
+        font-size: 12px;
+    }
+    .nav {
+        font-size: 16px !important;
+    }
     .logo {
-        display: none !important;
+        display: flex !important;
+        width: 20%;
+    }
+    .salesAndSocialDiv {
+        width: 33%;
+    }
+    .contactForm {
+        width: 33%;
+    }
+    header {
+        height: 230px !important;
+    }
+    .filter {
+        height: 230px !important;
+    }
+    .title {
+        font-size : 16px;
     }
 }

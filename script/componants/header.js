@@ -20,6 +20,7 @@ export default class Header extends ManageDom {
         style:
           " width:100%; height:330px; position: absolute; display:flex; flex-direction: column; align-items: center; margin-top: 0px; background-color: black; opacity:0.65; z-index: 0;",
       },
+      {class: "filter"}
     ]);
 
     const headLogo = this.createMarkup("img", "", header, [
@@ -27,6 +28,7 @@ export default class Header extends ManageDom {
       { width: "150" },
       { height: "auto" },
       { style: "z-index: 0;" },
+      { class: "headLogo"}
     ]);
 
     const divGif = this.createMarkup("div", "", header, [
@@ -44,6 +46,7 @@ export default class Header extends ManageDom {
         style:
           "position: relative; left:10% ; bottom: -10px; animation: velomobile 8s infinite ease-in-out;",
       },
+      {class: "gif"}
     ]);
 
     const hr = this.createMarkup("hr", "", header, [
@@ -55,11 +58,12 @@ export default class Header extends ManageDom {
         style:
           "margin-bottom:50px ;width:80%; display: flex; flex-direction: row; justify-content: space-around; z-index: 0; font-family: epilogue; font-size: 20px;",
       },
+      {class : "nav"}
     ]);
 
     const accueil = this.createMarkup("a", "Accueil", nav, [
       { href: "../../index.html" },
-      { style: "text-decoration: none; color: white; z-index: 0;" },{}
+      { style: "text-decoration: none; color: white; z-index: 0;" },{class: "accueil"}
     ]);
 
     const company = this.createMarkup("a", "Notre entreprise", nav, [
@@ -92,6 +96,8 @@ export default class Header extends ManageDom {
         style:
           "font-size: 22px; color: white; z-index: 0; font-family: epilogue;",
       },
+      {class: "head-title"}
+      
     ]);
 
     const flag = this.createMarkup("div", "", header, [
@@ -102,15 +108,15 @@ export default class Header extends ManageDom {
     ]);
 
     const blue = this.createMarkup("div", "", flag, [
-      { style: "width: 100px; height: 10px; background-color : #007dcc" },
+      { style: "width: 100px; height: 10px; background-color : #007dcc" }, { class: "flag-color"}
     ]);
 
     const white = this.createMarkup("div", "", flag, [
-      { style: "width: 100px; height: 10px; background-color : white" },
+      { style: "width: 100px; height: 10px; background-color : white" },{ class: "flag-color"}
     ]);
 
     const red = this.createMarkup("div", "", flag, [
-      { style: "width: 100px; height: 10px; background-color : #cc0000" },
+      { style: "width: 100px; height: 10px; background-color : #cc0000" },{ class: "flag-color"}
     ]);
 
     const bottomDiv = this.createMarkup("div", "", header, [
@@ -118,6 +124,7 @@ export default class Header extends ManageDom {
         style:
           "width: 100%; display: flex; align-items: flex-start; justify-content: flex-start;",
       },
+      
     ]);
 
     const contactButton = this.createMarkup("a", "Nous contacter", bottomDiv, [
@@ -126,6 +133,8 @@ export default class Header extends ManageDom {
           "position: relative; bottom: -25px; width: 230px ; height: 40px; font-size: 20px; color: white; background-color: #cc0000; border: none; text-decoration: none; text-align: center; items-align: center; line-height: 40px; left:5%; font-family: epilogue",
       },
       { href: "../../html/contact.html" },
+      { class: "contactButton"}
+
     ]);
 
     const border = this.createMarkup("div", "", header, [
@@ -133,6 +142,7 @@ export default class Header extends ManageDom {
         style:
           "position: relative; bottom: -25px; width: 100%; height: 20px; background-color: #007dcc;",
       },
+      { class: "border"}
     ]);
   }
 }
