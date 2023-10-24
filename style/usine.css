@@ -113,7 +113,6 @@ p {
     width: 70%;
     margin-top: 50px;
     padding-bottom: 50px;
-    background-color: red;
 }
 
 .mapSite {
@@ -126,7 +125,6 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: orange;
 }
 
 .ticket-form-book {
