@@ -74,7 +74,7 @@ export default class SectionActuality extends ManageDom {
     //Loop again to add style : ignore the first item
     for (let i = 1; i < this.data.nb_articles + 1; i++) {
       this.articles[i].style.position = "relative";
-      this.articles[i].setAttribute("class", "transform");
+      this.articles[i].setAttribute("class", "transform actuality_card");
       this.articles[i].style.justifySelf = "left";
     }
     return { arrowRight, arrowLeft, section };

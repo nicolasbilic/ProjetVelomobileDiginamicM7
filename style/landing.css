@@ -8,6 +8,31 @@
 
     }
     .actuality_card{ 
-        background-color: red !important
+       width: 99% !important;
+       margin-bottom: 20px !important
+
+    }
+    .actuality_card img {
+        max-height: 300px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .container_lightbox {
+        display:none !important;
+    }
+    .container_details {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: row !important;
+    }
+    .details_button {
+        height: 40px !important;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .actuality_card img {
+        max-height: 200px;
     }
 }

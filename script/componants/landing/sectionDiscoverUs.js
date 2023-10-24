@@ -32,6 +32,9 @@ export default class SectionDiscoverUs extends ManageDom {
         style:
           "width: 55%; display: flex; flex-direction: column; justify-content:space-around",
       },
+      {
+        class: "container_details",
+      },
     ]);
     //call the lightbox details method
     this.createLightBoxDetails(containerDetails, this.data.lightboxText.number);
@@ -56,6 +59,9 @@ export default class SectionDiscoverUs extends ManageDom {
     const containerLightBox = this.createMarkup("div", "", lightBoxAndText, [
       {
         style: "width: 35%; position: relative; display: flex; ",
+      },
+      {
+        class: "container_lightbox",
       },
     ]);
     //create the lightbox's pictures from the array
@@ -111,6 +117,9 @@ export default class SectionDiscoverUs extends ManageDom {
         {
           style:
             "width: 20%; min-width: 125px;height: 20%; margin-bottom: 30px; background-color: #007DCC; border-radius: 10px; border: none; color: white; cursor: pointer;",
+        },
+        {
+          class: "details_button",
         },
       ]);
       button.addEventListener("mouseenter", () => {

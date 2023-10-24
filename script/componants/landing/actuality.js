@@ -54,11 +54,9 @@ export default class Actuality extends ManageDom {
   handleEvent() {
     const buttonCard = this.dom_element.buttonCard;
     buttonCard.addEventListener("mouseenter", () => {
-      console.log("dza");
       buttonCard.style.transform = "scale(1.1) ";
     });
     buttonCard.addEventListener("mouseleave", () => {
-      console.log("dza");
       buttonCard.style.transform = "scale(1) ";
     });
   }
