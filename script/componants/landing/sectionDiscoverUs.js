@@ -111,7 +111,7 @@ export default class SectionDiscoverUs extends ManageDom {
         [
           {
             style:
-              "width: 90%; margin-bottom: 20px; max-height: 75px; overflow: hidden;  white-space: pre-wrap; text-overflow: ellipsis; ",
+              "width: 90%; margin-bottom: 20px; max-height: 90px; overflow: hidden;  white-space: pre-wrap; text-overflow: ellipsis; ",
           },
         ]
       );
