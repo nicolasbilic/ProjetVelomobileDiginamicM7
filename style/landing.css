@@ -1,11 +1,14 @@
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1180px) {    
+    .container_arrows{
+        display: none !important;
+    }
+    .container_banner_button {
+        height: 40px !important;
+        width: 50% !important;
+    }
     .container_cards_actuality{
         display: flex !important;
         flex-direction: column !important
-    }
-    .container_arrows{
-        display: none !important;
-
     }
     .actuality_card{ 
        width: 99% !important;
@@ -18,6 +21,9 @@
 }
 
 @media screen and (max-width: 850px) {
+    .container_lightbox_and_text {
+        height: 200px !important;
+    }
     .container_lightbox {
         display:none !important;
     }
@@ -29,6 +35,10 @@
     .details_button {
         height: 40px !important;
     }
+    .container_banner_button {
+        width: 100% !important;
+        height: 30px !important;
+     }
 }
 
 @media screen and (max-width: 550px) {

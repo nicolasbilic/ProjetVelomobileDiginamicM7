@@ -23,6 +23,9 @@ export default class SectionDiscoverUs extends ManageDom {
         style:
           "width: 100%; height:465px; display:flex; justify-content:space-between;",
       },
+      {
+        class: "container_lightbox_and_text",
+      },
     ]);
     //Call the lightbox methods
     this.createLightBox(lightBoxAndText);
@@ -140,7 +143,6 @@ export default class SectionDiscoverUs extends ManageDom {
     const startInterval = () => {
       //Use a Timer method to switch picture
       interval = setInterval(() => {
-        console.log("d");
         //Déclar the current and next picture
         let currentPicture = this.images[i];
         let nextPicture = this.images[i + 1];

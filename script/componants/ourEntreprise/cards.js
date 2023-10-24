@@ -20,7 +20,7 @@ export default class Cards extends ManageDom {
     //Create the picture
     const cardPicture = this.createMarkup("img", "", cardBody, [
       {
-        style: "width: 50%; height:auto; margin: 0; ",
+        style: "width: 50%; height:auto; margin: 0; object-fit: cover",
         src: `./../../assets/imgs/entreprise/${this.datas.picture}`,
         alt: "Banner",
       },
@@ -49,7 +49,8 @@ export default class Cards extends ManageDom {
     this.datas.texts.forEach((text) => {
       const pCard = this.createMarkup("p", text, textBody, [
         {
-          style: "max-height: 131px; overflow: hidden",
+          style:
+            "max-height: 255px; margin-top: 80px; text-overflow: ellipsis;  overflow: hidden;",
         },
       ]);
     });
