@@ -1,11 +1,34 @@
 body {
-    font-family: 'Epilogue'; /* à télécharger et mettre dans le style.css*/
-    margin: 0 100px;
+    font-family: "Epilogue";
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .description {
     width: 50%;
-    text-align: center;
+    /* background-color: blue; */
+    display: flex;
+    padding-left: 100px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 20px 0;
+   /*  background-color: red; */
+}
+
+.content-map {
+    /* max-height: 600px; */
+    width: 50%;
+    height: auto;
+   /*  background-color: pink; */
 }
 
 .question {
@@ -14,21 +37,10 @@ body {
     margin-bottom: 0px;
 }
 
-.content {
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-}
-
-.content-map {
-    /* max-height: 600px; */
-    width: 50%;
-    height: auto;
-}
-
 .content-form {
     padding: 0 0 0 40px;
     width: 50%;
+   /*  background-color: green; */
 }
 
 .content-form-nameFields {
@@ -44,9 +56,9 @@ body {
 }
 
 ::placeholder {
-    color: #606262;
+    color: #808080;
     font-weight: 600;
-    padding : 5px;
+    padding-left: 1px;
 }
 
 textarea {
@@ -54,18 +66,21 @@ textarea {
     border: none;
     background-color: #ecf5f6;
     resize: none;
+    margin-top: 5px;
 }
 
 textarea::placeholder {
     font-weight: 100;
 }
 
-input {
+.input {
     height: 45px;
     width: 250px;
     border-radius: 8px;
     border: none;
     background-color: #ecf5f6;
+    font-weight: bold;
+    padding-left: 5px;
 }
 
 button {
@@ -77,8 +92,13 @@ button {
     color: white;
     font-weight: 600;
     text-align: center;
-    margin-top: 15px;
+    margin-top: 20px;
     padding: 0;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    cursor: pointer;
 }
 
 .socials-thumb {
@@ -119,13 +139,13 @@ button {
     width: 50px;
 }
 
-select {
+.profile {
     height: 45px;
     width: 254px;
     border-radius: 8px;
     border: none;
     background-color: #ecf5f6;
     font-weight: 600;
-    color: #606262;
+    color: #808080;
     padding : 5px;
 }

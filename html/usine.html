@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style/style.css" />
-    <link rel="stylesheet" href="../style/usine.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <script type="module" src="./../script/main.js"></script>
-    <title>Notre Usine</title>
-  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./../style/style.css" />
+  <link rel="stylesheet" href="../style/usine.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap"
+  rel="stylesheet" />
+  <script type="module" src="./../script/main.js"></script>
+  <title>Notre usine</title>
+</head>
 
   <body>
     <main>
@@ -21,52 +21,54 @@
        1ère section visite guidée 
     ---------------------------------->
 
-      <div class="visit">
-        <img
-          src="../assets/imgs/img_production_site.png"
-          alt="site de production"
-          class="prodSite"
-        />
-        <div class="parentVisite">
-          <div class="visit-content">
-            <strong>
-              <p class="title">Une visite guidée personnalisée</p> </strong
-            ><br />
-            <p class="text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-              vehicula semper viverra. Mauris rutrum iaculis efficitur. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <p class="text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-              vehicula semper viverra. Mauris rutrum iaculis efficitur. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-          </div>
+    <div class="visit">
+      <img src="../assets/imgs/img_production_site.png" alt="site de production" class="prodSite" />
+      <div class="parentVisite">
+        <div class="visit-content">
+            <div class="visit-content-Guide">
+                <p class="title"><strong>Une visite guidée personnalisée</strong></p>
+              <img src="./../assets/imgs/icons_touristique.png" alt="visiteur" class="iconTourist">
+            </div>
+          <br />
+          <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing 
+            elit. Duis vehicula semper viverra. Mauris rutrum 
+            iaculis efficitur. Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit.
+          </p>
+          <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing 
+            elit. Duis vehicula semper viverra. Mauris rutrum 
+            iaculis efficitur. Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit.
+          </p>
         </div>
       </div>
+    </div>
 
       <!--------------------------------
        2ème section personnes à votre écoute
     ---------------------------------->
 
-      <div class="people">
-        <div class="parentPeople">
-          <div class="people-content">
-            <strong>
-              <p class="title">Des personnes à votre écoute</p>
-            </strong>
-            <p class="text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-              vehicula semper viverra. Mauris rutrum iaculis efficitur. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <p class="text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-              vehicula semper viverra. Mauris rutrum iaculis efficitur. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
+    <div class="people">
+      <div class="parentPeople">
+        <div class="people-content">
+          <div class="people-content-listen">
+              <p class="title"><strong>Des personnes à votre écoute</strong></p>
+            <img src="./../assets/imgs/icon_listening.png" alt="employé qui communique" class="iconTalk">
           </div>
+          <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing 
+            elit. Duis vehicula semper viverra. Mauris rutrum 
+            iaculis efficitur. Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit.
+          </p>
+          <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing 
+            elit. Duis vehicula semper viverra. Mauris rutrum 
+            iaculis efficitur. Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit.
+          </p>
         </div>
         <img
           src="../assets/imgs/img_production_product.png"
@@ -78,65 +80,40 @@
       <!--------------------------------
        3ème section réservation ticket 
     ---------------------------------->
-      <div class="ticket">
-        <img
-          src="../assets/imgs/img_production_point.png"
-          alt="localisation de l'usine, à Mende"
-          class="mapSite"
-        />
-        <form action="#" id="ticket-form">
+    <div class="ticket">
+      <img src="../assets/imgs/img_production_point.png" alt="localisation de l'usine, à Mende" class="mapSite" />
+      <form action="#" id="ticket-form">
+        <div class="ticket-form-book">
           <p class="title">
             <strong>Obtenez un ticket pour visiter l'usine</strong>
           </p>
-          <!-- champs prénom et nom -->
-          <div class="content-form-nameFields">
-            <div class="content-form-field">
-              <label for="fName"></label>
-              <input
-                type="text"
-                name="fName"
-                id="fName"
-                placeholder="Votre prénom"
-                required
-              />
-            </div>
-            <div class="content-form-field">
-              <label for="lName"></label>
-              <input
-                type="text"
-                name="lName"
-                id="lName"
-                placeholder="Votre nom"
-                required
-              />
-            </div>
+          <img src="./../assets/imgs/icon_ticket.png" alt="ticket" class="iconTicket">
+        </div>
+        <!-- champs prénom et nom -->
+        <div class="content-form-nameFields">
+          <div class="content-form-field">
+            <label for="fName"></label>
+            <input class="input" type="text" name="fName" id="fName" placeholder="Votre prénom" required />
           </div>
-          <!-- champs mail et téléphone -->
-          <div class="content-form-mailNumber">
-            <div class="content-form-field">
-              <label for="mail"></label>
-              <input
-                type="mail"
-                name="mail"
-                id="mail"
-                placeholder="Votre mail"
-                required
-              />
-            </div>
-            <div class="content-form-field">
-              <label for="phone"></label>
-              <input
-                type="number"
-                name="phone"
-                id="phone"
-                placeholder="Votre numéro"
-                required
-              />
-            </div>
+          <div class="content-form-field">
+            <label for="lName"></label>
+            <input class="input" type="text" name="lName" id="lName" placeholder="Votre nom" required />
           </div>
-          <button type="button">Recevoir mon ticket</button>
-        </form>
-      </div>
-    </main>
-  </body>
+        </div>
+        <!-- champs mail et téléphone -->
+        <div class="content-form-mailNumber">
+          <div class="content-form-field">
+            <label for="mail"></label>
+            <input class="input" type="mail" name="mail" id="mail" placeholder="Votre mail" required />
+          </div>
+          <div class="content-form-field">
+            <label for="phone"></label>
+            <input class="input" type="number" name="phone" id="phone" placeholder="Votre numéro" required />
+          </div>
+        </div>
+        <button type="submit">Recevoir mon ticket</button>
+      </form>
+    </div>
+  </main>
+</body>
 </html>

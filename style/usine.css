@@ -1,6 +1,5 @@
 body {
-    margin: 0;
-    padding: 0;
+    font-family: "Epilogue";
 }
 
 main {
@@ -11,12 +10,14 @@ main {
 }
 
 p {
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .text {
     padding-left: 5px;
 }
+
+/**************** 1er bloc ****************/
 
 .visit {
     display: flex;
@@ -41,10 +42,28 @@ p {
     /* background-color: red; */
 }
 
+.visit-content-Guide {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.iconTourist {
+    width: auto;
+    height: 40px;
+    bottom: 6px;
+    left: 2px;
+    position: relative;
+}
+
 .prodSite {
     width: 30%;
     height: auto;
 }
+
+
+/*************** 2ème bloc *****************/
+
+
 
 .people {
     display: flex;
@@ -69,16 +88,32 @@ p {
 /*     background-color: red; */
 }
 
+.people-content-listen {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.iconTalk {
+    width: auto;
+    height: 35px;
+    left: 6px;
+    position: relative;
+}
+
 .prodProduct {
     width: 30%;
     height: auto;
 }
 
+
+/*************** 3ème bloc *****************/
+
 .ticket {
     display: flex;
     justify-content: space-between;
     width: 70%;
-/*     background-color: pink; */
+    /* background-color: pink; */
+    padding-bottom: 50px;
 }
 
 .mapSite {
@@ -95,8 +130,21 @@ p {
 /*     background-color: orange; */
 }
 
+.ticket-form-book {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.iconTicket {
+    width: auto;
+    height: 30px;
+    left: 8px;
+    top: 6px;
+    position: relative;
+}
+
 .title {
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 15px;
     margin-bottom: 0px;
 }
@@ -116,15 +164,17 @@ p {
 ::placeholder {
     color: #606262;
     font-weight: 600;
-    padding : 5px;
+    padding-left: 1px;
 }
 
-input {
+.input {
     height: 45px;
     width: 250px;
     border-radius: 8px;
     border: none;
     background-color: #ecf5f6;
+    font-weight: bold;
+    padding-left: 5px;
 }
 
 button {
@@ -138,4 +188,9 @@ button {
     text-align: center;
     margin-top: 15px;
     padding: 0;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    cursor: pointer;
 }
