@@ -68,7 +68,7 @@ export default class OurEntreprise extends ManageDom {
     const blueBorderBottom = this.createMarkup("div", "", main, [
       {
         style:
-          "width: 100%; height: 10px; background-color: #007DCC; margin-bottom: 40px;",
+          "width: 100%; height: 10px; background-color: #007DCC; margin-bottom: 80px;",
       },
     ]);
   }

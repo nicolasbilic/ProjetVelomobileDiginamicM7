@@ -14,7 +14,7 @@ export default class Cards extends ManageDom {
     const cardBody = this.createMarkup("div", "", this.sectionCard, [
       {
         style:
-          "width: 60%; height: auto; background-color: #EFEFEF; margin-bottom: 40px; display: flex; position: relative; ",
+          "width: 80%; height: auto; background-color: #EFEFEF; margin-bottom: 80px; display: flex; position: relative; ",
       },
     ]);
     //Create the picture
