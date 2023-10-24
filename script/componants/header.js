@@ -63,17 +63,17 @@ export default class Header extends ManageDom {
 
     const accueil = this.createMarkup("a", "Accueil", nav, [
       { href: "../../index.html" },
-      { style: "text-decoration: none; color: white; z-index: 0;" },{class: "accueil"}
+      { style: "text-decoration: none; color: white; z-index: 0;" },{class: "accueil h-link"}
     ]);
 
     const company = this.createMarkup("a", "Notre entreprise", nav, [
       { href: "../../html/ourEntreprise.html" },
-      { style: "text-decoration: none; color: white; z-index: 0;" },
+      { style: "text-decoration: none; color: white; z-index: 0;" },{class: "h-link"}
     ]);
 
     const factory = this.createMarkup("a", "Notre usine", nav, [
       { href: "../../html/usine.html" },
-      { style: "text-decoration: none; color: white; z-index: 0;" },
+      { style: "text-decoration: none; color: white; z-index: 0;" },{class: "h-link"}
     ]);
 
     const velomobiles = this.createMarkup(
@@ -82,13 +82,13 @@ export default class Header extends ManageDom {
       nav,
       [
         { href: "../../html/velomobiles.html" },
-        { style: "text-decoration: none; color: white; z-index: 0;" },
+        { style: "text-decoration: none; color: white; z-index: 0;" },{class: "h-link"}
       ]
     );
 
     const contact = this.createMarkup("a", "Contact", nav, [
       { href: "../../html/contact.html" },
-      { style: "text-decoration: none; color: white; z-index: 0;" },
+      { style: "text-decoration: none; color: white; z-index: 0;" },{class: "h-link"}
     ]);
 
     const title = this.createMarkup("span", "Vélomobiles français", header, [
