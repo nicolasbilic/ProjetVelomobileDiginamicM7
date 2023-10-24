@@ -1,0 +1,28 @@
+@media screen and (max-width: 1400px) {
+    .span_card {
+        width: 50% !important;
+        height: 40px !important
+    }
+}
+@media screen and (max-width: 900px) {
+    .h2_profil_name, .h2_profil_status {
+        margin: 0;
+    }
+    .contrainer_profil {
+        width: 100% !important;
+    }
+    .img_card {
+        display: none !important;
+    }
+    .span_card {
+        width: 100% !important;
+    }
+    .container_text_card {
+        width:100% !important;
+    }
+}
+@media screen and (max-width: 900px) {
+    .contrainer_profil {
+        min-height: 130px !important;
+    }
+}

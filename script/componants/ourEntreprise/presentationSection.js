@@ -46,8 +46,9 @@ export default class PresentationSection extends ManageDom {
     const containerProfil = this.createMarkup("div", "", section, [
       {
         style:
-          "width:60%; display:flex; margin-bottom: 40px; display:flex; align-items:center; position:relative",
+          "width:80%; display:flex; margin-bottom: 40px; display:flex; align-items:center; position:relative",
       },
+      { class: "contrainer_profil" },
     ]);
     //Create the profil picture
     const profilPicture = this.createMarkup("img", "", containerProfil, [
@@ -62,7 +63,7 @@ export default class PresentationSection extends ManageDom {
     const detailsContainer = this.createMarkup("div", "", containerProfil, [
       {
         style:
-          "width:100%; box-sizing: border-box;  height: auto; max-height: 220px; background-color: #EFEFEF; border-radius: 250px 0 0 250px; overflow: hidden; position: absolute",
+          "width:100%; box-sizing: border-box;  height: auto; max-height: 450px; background-color: #EFEFEF; border-radius: 250px 0 0 250px; overflow: hidden; position: absolute",
       },
     ]);
     //Create the profil name
@@ -75,6 +76,9 @@ export default class PresentationSection extends ManageDom {
           style:
             "width:70%; height:auto; background-color: #EFEFEF; border-radius: 10px; margin-left: 3%;",
         },
+        {
+          class: "h2_profil_name",
+        },
       ]
     );
     //Create the status
@@ -86,6 +90,9 @@ export default class PresentationSection extends ManageDom {
         {
           style:
             "width:70%; height:auto; background-color: #EFEFEF; border-radius: 10px;  margin-left: 3%; font-size: 20px;",
+        },
+        {
+          class: "h2_profil_status",
         },
       ]
     );
