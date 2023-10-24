@@ -101,8 +101,16 @@ export default class SectionDiscoverUs extends ManageDom {
         "h2",
         this.data.lightboxText.title[i],
         details,
-        [{ style: "width: 90%;height: 40px; margin: s0;" }]
+        [{ style: "width: 90%;height: 40px; " }]
       );
+      //Creathe the eco logo
+      const imgEco = this.createMarkup("img", "", title, [
+        {
+          style: "width:35px; margin: 0; position: absolute;",
+          src: `./../../assets/imgs/feuille.png`,
+          alt: `logo eco`,
+        },
+      ]);
       //Create the text
       const text = this.createMarkup(
         "p",

@@ -35,6 +35,13 @@ export default class Actuality extends ManageDom {
         style: "width:90%;",
       },
     ]);
+    const imgEco = this.createMarkup("img", "", h2Card, [
+      {
+        style: "width:35px; margin: 0; position: absolute;",
+        src: `./../../assets/imgs/feuille.png`,
+        alt: `logo eco`,
+      },
+    ]);
     //Create the p card
     const pCard = this.createMarkup("p", this.data.text, card, [
       {
