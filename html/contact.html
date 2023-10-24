@@ -64,7 +64,7 @@
                     </div>
                     <!-- menu déroulant-->
                     <div class="content-form-field content-form-field-dropdown">
-                        <select class="profile" name="profile" id="profile">
+                        <select class="profile" name="profile" id="profile" required>
                             <option value="" disabled selected>Profil</option>
                             <option value="ambassadeur">Ambassadeur</option>
                             <option value="investisseur">Investisseur</option>
@@ -80,7 +80,7 @@
                     <div class="content-form-field">
                         <label for="message"></label>
                         <textarea name="message" id="message" cols="50" rows="10" placeholder="Votre message..."
-                            maxlength="500"></textarea>
+                            maxlength="500" required></textarea>
                     </div>
                     <button type="submit">Envoyer</button>
                 </form>
@@ -92,13 +92,13 @@
         ------------------------------------------------------------------->
         <div class="socials">
             <div class="socials-header">
-                <p>Envoyez-nous un message directement sur les réseaux sociaux &nbsp;</p>
+                <p class="question">Envoyez-nous un message directement sur les réseaux sociaux &nbsp;</p>
                 <img src="../assets/imgs/icon-pouce.png" alt="pouce bleu de facebook" class="socials-thumb">
             </div>
             <div class="socials-icons">
-                <img src="../assets/imgs/linkedin.png" alt="icone linkedin" class="img-icone-linkedin">
-                <img src="../assets/imgs/icons8-facebook.png" alt="icone facebook">
-                <img src="../assets/imgs/icon-insta.png" alt="icone instagram">
+                <img src="../assets/imgs/linkedin.png" alt="icone linkedin" class="img-icone">
+                <img src="../assets/imgs/icons8-facebook.png" alt="icone facebook" class="img-icone">
+                <img src="../assets/imgs/icon-insta.png" alt="icone instagram" class="img-icone">
             </div>
         </div>
     </main>
