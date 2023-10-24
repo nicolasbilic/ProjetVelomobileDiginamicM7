@@ -29,7 +29,7 @@ p {
 
 .parentVisite {
     /* background-color: yellow; */
-    width: 60%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -68,6 +68,7 @@ p {
 .people {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     width: 70%;
 /*     background-color: blue; */
     padding-bottom: 50px;
@@ -75,16 +76,18 @@ p {
 
 .parentPeople {
 /*     background-color: green; */
-    width: 60%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
+    justify-content: space-between;
+    
 }
 
 .people-content {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 50%;
 /*     background-color: red; */
 }
 
@@ -111,7 +114,7 @@ p {
 .ticket {
     display: flex;
     justify-content: space-between;
-    width: 70%;
+    width: 100%;
     /* background-color: pink; */
     padding-bottom: 50px;
 }
