@@ -1,5 +1,5 @@
 export default class ManageDom {
-  /**
+    /**
    * Crée un élément du dom, lui ajoute du texte, le place comme dernier
    * enfant de parent et ajoute un attribut en utilisant le paramètre attributes
    * @param {String} markup_name
