@@ -1,5 +1,5 @@
 import ManageDom from "./ManageDom.js";
-import PresentationSection from "./ourEntreprise/PresentationSection.js";
+import PresentationSection from "./ourEntreprise/presentationSection.js";
 import Cards from "./ourEntreprise/cards.js";
 
 //Class to creat OurEntreprise page
